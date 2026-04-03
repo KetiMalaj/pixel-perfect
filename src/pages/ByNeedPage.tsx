@@ -49,7 +49,7 @@ const byNeedData: Record<string, ByNeedData> = {
     ],
   },
   "build-brand": {
-    title: ["Create a ", "brand", " that is ", "clear,", " consistent, and ", "memorable"],
+    title: ["Create a ", "brand", " that is clear, consistent, and ", "memorable"],
     highlightWords: ["brand", "memorable"],
     description: "We develop strong brand identities and positioning strategies that differentiate you in the market and connect with the right audience.",
     illustration: brandIllust,
