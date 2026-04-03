@@ -155,6 +155,17 @@ const ByNeedPage = () => {
     return data.title.map((part, i) => {
       const trimmed = part.trim();
       if (data.brushWords.includes(trimmed)) {
+        const brushImg = brushImages[trimmed];
+        if (brushImg) {
+          return (
+            <img
+              key={i}
+              src={brushImg}
+              alt={trimmed}
+              className="inline-block h-[1.1em] align-baseline relative -top-[0.05em]"
+            />
+          );
+        }
         return (
           <span key={i} className="highlight-brush font-handwritten text-lime">
             {part}
