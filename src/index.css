@@ -91,19 +91,27 @@
   .highlight-brush {
     position: relative;
     display: inline-block;
+    z-index: 0;
   }
 
   .highlight-brush::before {
     content: '';
     position: absolute;
-    top: 5%;
-    left: -10px;
-    right: -10px;
-    bottom: 5%;
+    top: -15%;
+    left: -12px;
+    right: -25px;
+    bottom: -15%;
     background: hsl(var(--primary));
-    border-radius: 8px 4px 6px 3px;
-    transform: rotate(-1deg) skewX(-2deg);
     pointer-events: none;
     z-index: -1;
+    clip-path: polygon(
+      0% 20%, 2% 8%, 8% 2%, 15% 0%, 22% 5%, 30% 0%, 40% 3%,
+      50% 0%, 58% 2%, 65% 0%, 72% 4%, 80% 0%, 88% 3%,
+      95% 0%, 100% 8%, 100% 18%, 98% 30%, 100% 42%,
+      98% 55%, 100% 68%, 99% 80%, 100% 90%, 97% 98%,
+      90% 100%, 82% 96%, 75% 100%, 68% 97%, 60% 100%,
+      50% 98%, 42% 100%, 35% 97%, 25% 100%, 18% 98%,
+      10% 100%, 4% 96%, 0% 88%, 1% 72%, 0% 58%, 2% 42%, 0% 30%
+    );
   }
 }
