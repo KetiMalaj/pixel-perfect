@@ -87,4 +87,20 @@
     transform: rotate(-3deg);
     pointer-events: none;
   }
+
+  .highlight-brush {
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight-brush::before {
+    content: '';
+    position: absolute;
+    inset: -2px -8px;
+    background: hsl(var(--primary));
+    border-radius: 4px;
+    transform: rotate(-1deg) skewX(-2deg);
+    pointer-events: none;
+    z-index: -1;
+  }
 }

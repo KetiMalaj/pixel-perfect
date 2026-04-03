@@ -12,7 +12,8 @@ import digitalIllust from "@/assets/byneed-digital-illust.png";
 
 interface ByNeedData {
   title: string[];
-  highlightWords: string[];
+  brushWords: string[];
+  ovalWords: string[];
   description: string;
   illustration: string;
   features: { title: string; description: string }[];
