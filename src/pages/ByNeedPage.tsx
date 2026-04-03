@@ -162,7 +162,7 @@ const ByNeedPage = () => {
               key={i}
               src={brushImg}
               alt={trimmed}
-              className="inline h-[1.15em] align-middle"
+              className="inline h-[1.4em] align-middle"
               style={{ display: 'inline', verticalAlign: 'middle' }}
             />
           );
