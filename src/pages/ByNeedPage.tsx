@@ -34,6 +34,10 @@ interface ByNeedData {
   ovalWords: string[];
   description: string;
   illustration: string;
+  features: string[];
+  bottomNote?: string;
+}
+  illustration: string;
   features: { title: string; description: string }[];
   bottomNote?: string;
 }
