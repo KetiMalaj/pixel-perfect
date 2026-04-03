@@ -87,4 +87,23 @@
     transform: rotate(-3deg);
     pointer-events: none;
   }
+
+  .highlight-brush {
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight-brush::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: -10px;
+    right: -10px;
+    bottom: 5%;
+    background: hsl(var(--primary));
+    border-radius: 8px 4px 6px 3px;
+    transform: rotate(-1deg) skewX(-2deg);
+    pointer-events: none;
+    z-index: -1;
+  }
 }
