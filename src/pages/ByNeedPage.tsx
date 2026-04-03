@@ -63,8 +63,8 @@ const byNeedData: Record<string, ByNeedData> = {
     ],
   },
   campaigns: {
-    title: ["Plan, ", "execute", " and optimize campaigns that deliver ", "impact"],
-    highlightWords: ["execute", "impact"],
+    title: ["Plan, ", "execute,", " and optimize campaigns that deliver ", "impact"],
+    highlightWords: ["execute,", "impact"],
     description: "We design and manage integrated campaigns that combine strategy, creativity, and data to reach and influence your audience effectively.",
     illustration: campaignsIllust,
     features: [
