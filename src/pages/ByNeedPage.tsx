@@ -227,9 +227,7 @@ const ByNeedPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-10">
             {data.features.map((f, i) => (
               <div key={i} className="border-t border-border pt-4">
-                <p className="text-sm text-foreground">
-                  <strong>{f.title}</strong> {f.description}
-                </p>
+                <p className="text-sm text-foreground" dangerouslySetInnerHTML={{ __html: f }} />
               </div>
             ))}
           </div>
