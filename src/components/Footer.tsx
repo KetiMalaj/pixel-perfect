@@ -4,7 +4,19 @@ const Footer = () => {
   return (
     <footer>
       {/* Decorative lime bar - faded edges */}
-      <div className="h-3 w-full" style={{ background: 'linear-gradient(to right, transparent 0%, hsl(var(--lime)) 20%, hsl(var(--lime)) 80%, transparent 100%)' }} />
+      <div className="flex h-3 justify-center gap-[2px]">
+        <div className="w-16 bg-lime opacity-10" />
+        <div className="w-16 bg-lime opacity-25" />
+        <div className="w-16 bg-lime opacity-40" />
+        <div className="w-16 bg-lime opacity-60" />
+        <div className="w-16 bg-lime opacity-80" />
+        <div className="flex-1 max-w-[30%] bg-lime" />
+        <div className="w-16 bg-lime opacity-80" />
+        <div className="w-16 bg-lime opacity-60" />
+        <div className="w-16 bg-lime opacity-40" />
+        <div className="w-16 bg-lime opacity-25" />
+        <div className="w-16 bg-lime opacity-10" />
+      </div>
 
       <div className="bg-primary text-lime">
         <div className="max-w-6xl mx-auto px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
