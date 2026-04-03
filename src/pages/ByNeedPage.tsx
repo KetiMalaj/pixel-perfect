@@ -147,8 +147,15 @@ const ByNeedPage = () => {
 
   const renderTitle = () => {
     return data.title.map((part, i) => {
-      const isHighlight = data.highlightWords.includes(part.trim());
-      if (isHighlight) {
+      const trimmed = part.trim();
+      if (data.brushWords.includes(trimmed)) {
+        return (
+          <span key={i} className="highlight-brush font-handwritten text-lime">
+            {part}
+          </span>
+        );
+      }
+      if (data.ovalWords.includes(trimmed)) {
         return (
           <span key={i} className="highlight-oval font-handwritten text-lime">
             {part}
