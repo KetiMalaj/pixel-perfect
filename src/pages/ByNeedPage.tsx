@@ -23,7 +23,8 @@ interface ByNeedData {
 const byNeedData: Record<string, ByNeedData> = {
   "drive-growth": {
     title: ["Accelerate ", "results", " through data-driven ", "digital ", "strategies"],
-    highlightWords: ["results", "strategies"],
+    brushWords: ["results"],
+    ovalWords: ["strategies"],
     description: "We help businesses grow by combining performance marketing, technology, and continuous optimization.",
     illustration: growthIllust,
     features: [
@@ -37,7 +38,8 @@ const byNeedData: Record<string, ByNeedData> = {
   },
   "understand-audience": {
     title: ["Turn data into ", "Insights", " and insight into ", "strategy"],
-    highlightWords: ["Insights", "strategy"],
+    brushWords: ["Insights"],
+    ovalWords: ["strategy"],
     description: "We provide a deep understanding of your market, customers, and audience behavior through advanced research and data platforms.",
     illustration: audienceIllust,
     features: [
@@ -51,7 +53,8 @@ const byNeedData: Record<string, ByNeedData> = {
   },
   "build-brand": {
     title: ["Create a ", "brand", " that is clear, consistent, and ", "memorable"],
-    highlightWords: ["brand", "memorable"],
+    brushWords: ["brand"],
+    ovalWords: ["memorable"],
     description: "We develop strong brand identities and positioning strategies that differentiate you in the market and connect with the right audience.",
     illustration: brandIllust,
     features: [
@@ -65,7 +68,8 @@ const byNeedData: Record<string, ByNeedData> = {
   },
   campaigns: {
     title: ["Plan, ", "execute,", " and optimize campaigns that deliver ", "impact"],
-    highlightWords: ["execute,", "impact"],
+    brushWords: ["execute,"],
+    ovalWords: ["impact"],
     description: "We design and manage integrated campaigns that combine strategy, creativity, and data to reach and influence your audience effectively.",
     illustration: campaignsIllust,
     features: [
@@ -79,7 +83,8 @@ const byNeedData: Record<string, ByNeedData> = {
   },
   political: {
     title: ["Data-driven ", "strategy", " for campaigns, institutions, and public ", "engagement"],
-    highlightWords: ["strategy", "engagement"],
+    brushWords: ["strategy"],
+    ovalWords: ["engagement"],
     description: "We support political actors, institutions, and organizations with strategic communication grounded in real-time data and public opinion insights.",
     illustration: politicalIllust,
     features: [
@@ -94,7 +99,8 @@ const byNeedData: Record<string, ByNeedData> = {
   },
   "personal-branding": {
     title: ["Build ", "Visibility,", " credibility, and ", "influence"],
-    highlightWords: ["Visibility,", "influence"],
+    brushWords: ["Visibility,"],
+    ovalWords: ["influence"],
     description: "We help individuals, professionals, and public figures develop a strong personal brand and manage their public presence.",
     illustration: personalIllust,
     features: [
@@ -108,7 +114,8 @@ const byNeedData: Record<string, ByNeedData> = {
   },
   "digital-presence": {
     title: ["Establish a ", "strong", " and effective online ", "foundation"],
-    highlightWords: ["strong", "foundation"],
+    brushWords: ["strong"],
+    ovalWords: ["foundation"],
     description: "We help you create or upgrade your digital presence to ensure your brand is visible, functional, and ready to perform.",
     illustration: digitalIllust,
     features: [
