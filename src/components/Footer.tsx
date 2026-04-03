@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       {/* Decorative lime bar - faded edges */}
-      <div className="flex h-3 justify-center gap-1">
+      <div className="flex h-3 justify-center">
         <div className="w-10 bg-lime opacity-15" />
         <div className="w-10 bg-lime opacity-30" />
         <div className="w-12 bg-lime opacity-50" />
