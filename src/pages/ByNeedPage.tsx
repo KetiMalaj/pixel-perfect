@@ -11,9 +11,21 @@ import personalIllust from "@/assets/byneed-personal-illust.png";
 import digitalIllust from "@/assets/byneed-digital-illust.png";
 
 import brushResults from "@/assets/brush-results.png";
+import brushInsights from "@/assets/brush-insights.png";
+import brushBrand from "@/assets/brush-brand.png";
+import brushExecute from "@/assets/brush-execute.png";
+import brushStrategy from "@/assets/brush-strategy.png";
+import brushVisibility from "@/assets/brush-visibility.png";
+import brushStrong from "@/assets/brush-strong.png";
 
 const brushImages: Record<string, string> = {
   "results": brushResults,
+  "Insights": brushInsights,
+  "brand": brushBrand,
+  "execute,": brushExecute,
+  "strategy": brushStrategy,
+  "Visibility,": brushVisibility,
+  "strong": brushStrong,
 };
 
 interface ByNeedData {
