@@ -232,9 +232,7 @@ const ByNeedPage = () => {
             ))}
           </div>
           {data.bottomNote && (
-            <p className="mt-12 text-center text-sm text-foreground max-w-2xl mx-auto">
-              {data.bottomNote}
-            </p>
+            <p className="mt-12 text-center text-sm text-foreground max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: data.bottomNote }} />
           )}
         </section>
       </main>
