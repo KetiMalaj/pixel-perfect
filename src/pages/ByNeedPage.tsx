@@ -34,9 +34,11 @@ interface ByNeedData {
   ovalWords: string[];
   description: string;
   illustration: string;
-  features: { title: string; description: string }[];
+  features: string[];
   bottomNote?: string;
 }
+
+
 
 const byNeedData: Record<string, ByNeedData> = {
   "drive-growth": {
@@ -46,12 +48,12 @@ const byNeedData: Record<string, ByNeedData> = {
     description: "We help businesses grow by combining performance marketing, technology, and continuous optimization.",
     illustration: growthIllust,
     features: [
-      { title: "Increase visibility", description: "and attract qualified traffic" },
-      { title: "Generate leads", description: "and improve conversion rates" },
-      { title: "Optimize", description: "digital campaigns across channels" },
-      { title: "Build high-performing", description: "websites and landing pages" },
-      { title: "Use data and analytics", description: "to continuously improve performance" },
-      { title: "We focus on measurable outcomes", description: "— ensuring your digital investment translates into real business growth." },
+      "<strong>Increase visibility</strong> and attract qualified traffic",
+      "<strong>Generate leads</strong> and improve conversion rates",
+      "<strong>Optimize</strong> digital campaigns across channels",
+      "<strong>Build high-performing</strong> websites and landing pages",
+      "Use <strong>data and analytics</strong> to continuously improve performance",
+      "We <strong>focus on measurable outcomes</strong> — ensuring your digital investment translates into real <strong>business growth.</strong>",
     ],
   },
   "understand-audience": {
@@ -61,12 +63,12 @@ const byNeedData: Record<string, ByNeedData> = {
     description: "We provide a deep understanding of your market, customers, and audience behavior through advanced research and data platforms.",
     illustration: audienceIllust,
     features: [
-      { title: "Conduct quantitative", description: "and qualitative research" },
-      { title: "Access", description: "targeted surveys through PollON" },
-      { title: "Monitor", description: "real-time sentiment and conversations with PulsON" },
-      { title: "Identify", description: "trends, needs, and behavioral patterns" },
-      { title: "Make informed strategic and", description: "communication decisions" },
-      { title: "We help you", description: "move from assumptions to evidence — building strategies grounded in real insight." },
+      "Conduct <strong>quantitative</strong> and <strong>qualitative</strong> research",
+      "<strong>Access</strong> targeted surveys through <strong>PollON</strong>",
+      "<strong>Monitor</strong> real-time sentiment and conversations with <strong>PulsON</strong>",
+      "<strong>Identify</strong> trends, needs, and behavioral patterns",
+      "Make informed strategic and <strong>communication decisions</strong>",
+      "<strong>We help you</strong> move from assumptions to evidence — <strong>building strategies</strong> grounded in real insight.",
     ],
   },
   "build-brand": {
@@ -76,12 +78,12 @@ const byNeedData: Record<string, ByNeedData> = {
     description: "We develop strong brand identities and positioning strategies that differentiate you in the market and connect with the right audience.",
     illustration: brandIllust,
     features: [
-      { title: "Define your brand strategy", description: "and positioning" },
-      { title: "Develop visual identity", description: "and design systems" },
-      { title: "Craft messaging", description: "and tone of voice" },
-      { title: "Produce creative assets", description: "across platforms" },
-      { title: "Ensure consistency across", description: "all communication channels" },
-      { title: "We build brands", description: "that don't just look good — they communicate clearly and stand out." },
+      "Define your <strong>brand strategy</strong> and positioning",
+      "Develop <strong>visual identity</strong> and design systems",
+      "<strong>Craft messaging</strong> and tone of voice",
+      "Produce <strong>creative assets</strong> across platforms",
+      "Ensure consistency across <strong>all communication</strong> channels",
+      "<strong>We build brands</strong> that don't just look good — they <strong>communicate clearly</strong> and stand out.",
     ],
   },
   campaigns: {
@@ -91,12 +93,12 @@ const byNeedData: Record<string, ByNeedData> = {
     description: "We design and manage integrated campaigns that combine strategy, creativity, and data to reach and influence your audience effectively.",
     illustration: campaignsIllust,
     features: [
-      { title: "Develop campaign strategy", description: "and messaging" },
-      { title: "Execute multi-channel campaigns", description: "(digital, social, media)" },
-      { title: "Create compelling", description: "content and visuals" },
-      { title: "Monitor performance", description: "and optimize in real time" },
-      { title: "Align communication", description: "with business or institutional goals" },
-      { title: "We ensure every campaign is", description: "structured, targeted, and results-driven." },
+      "Develop <strong>campaign strategy</strong> and messaging",
+      "Execute <strong>multi-channel campaigns</strong> (digital, social, media)",
+      "Create compelling <strong>content and visuals</strong>",
+      "<strong>Monitor performance</strong> and optimize in real time",
+      "Align <strong>communication</strong> with business or <strong>institutional goals</strong>",
+      "We ensure every campaign is <strong>structured, targeted,</strong> and <strong>results-driven.</strong>",
     ],
   },
   political: {
@@ -106,14 +108,14 @@ const byNeedData: Record<string, ByNeedData> = {
     description: "We support political actors, institutions, and organizations with strategic communication grounded in real-time data and public opinion insights.",
     illustration: politicalIllust,
     features: [
-      { title: "Develop", description: "campaign strategy and positioning" },
-      { title: "Track", description: "voter sentiment and public opinion using PulsON" },
-      { title: "Conduct targeted", description: "surveys and opinion research through PollON" },
-      { title: "Test messages, narratives, and", description: "campaign concepts before deployment" },
-      { title: "Monitor public discourse and", description: "emerging issues in real time" },
-      { title: "Build communication strategies", description: "aligned with audience behavior and expectations" },
+      "<strong>Develop</strong> campaign strategy and <strong>positioning</strong>",
+      "<strong>Track voter</strong> sentiment and public opinion <strong>using PulsON</strong>",
+      "<strong>Conduct targeted</strong> surveys and opinion research <strong>through PollON</strong>",
+      "Test messages, narratives, and <strong>campaign concepts</strong> before deployment",
+      "Monitor public discourse and <strong>emerging issues</strong> in real time",
+      "Build <strong>communication strategies</strong> aligned with audience behavior and expectations",
     ],
-    bottomNote: "We turn data into actionable insights — helping you communicate with clarity, precision, and impact.",
+    bottomNote: "We turn data into <strong>actionable insights</strong> — helping you communicate with clarity, precision, and impact.",
   },
   "personal-branding": {
     title: ["Build ", "Visibility,", " credibility, and ", "influence"],
@@ -122,12 +124,12 @@ const byNeedData: Record<string, ByNeedData> = {
     description: "We help individuals, professionals, and public figures develop a strong personal brand and manage their public presence.",
     illustration: personalIllust,
     features: [
-      { title: "Define your", description: "personal brand strategy" },
-      { title: "Build a consistent and", description: "authentic online presence" },
-      { title: "Create content", description: "aligned with your voice and goals" },
-      { title: "Manage reputation and", description: "public perception" },
-      { title: "Increase visibility", description: "across digital platforms" },
-      { title: "We position you with clarity", description: "and consistency — helping you stand out and be trusted." },
+      "<strong>Define your</strong> personal brand <strong>strategy</strong>",
+      "Build a consistent and authentic <strong>online presence</strong>",
+      "<strong>Create content</strong> aligned with your voice and goals",
+      "Manage reputation and <strong>public perception</strong>",
+      "<strong>Increase visibility</strong> across digital platforms",
+      "<strong>We position you with clarity</strong> and consistency — helping you stand out and be trusted.",
     ],
   },
   "digital-presence": {
@@ -137,12 +139,12 @@ const byNeedData: Record<string, ByNeedData> = {
     description: "We help you create or upgrade your digital presence to ensure your brand is visible, functional, and ready to perform.",
     illustration: digitalIllust,
     features: [
-      { title: "Design and develop", description: "modern, responsive websites" },
-      { title: "Optimize", description: "your platform for SEO and discoverability" },
-      { title: "Improve user experience", description: "and navigation" },
-      { title: "Set up analytics", description: "and performance tracking" },
-      { title: "Build a digital ecosystem", description: "aligned with your goals" },
-      { title: "We create digital foundations", description: "that support growth, engagement, and long-term success." },
+      "<strong>Design and develop</strong> modern, responsive websites",
+      "<strong>Optimize</strong> your platform for SEO and discoverability",
+      "Improve <strong>user experience</strong> and navigation",
+      "<strong>Set up analytics</strong> and performance tracking",
+      "Build a <strong>digital ecosystem</strong> aligned with your goals",
+      "<strong>We create digital foundations</strong> that support growth, engagement, and long-term success.",
     ],
   },
 };
@@ -225,16 +227,12 @@ const ByNeedPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-10">
             {data.features.map((f, i) => (
               <div key={i} className="border-t border-border pt-4">
-                <p className="text-sm text-foreground">
-                  <strong>{f.title}</strong> {f.description}
-                </p>
+                <p className="text-sm text-foreground" dangerouslySetInnerHTML={{ __html: f }} />
               </div>
             ))}
           </div>
           {data.bottomNote && (
-            <p className="mt-12 text-center text-sm text-foreground max-w-2xl mx-auto">
-              {data.bottomNote}
-            </p>
+            <p className="mt-12 text-center text-sm text-foreground max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: data.bottomNote }} />
           )}
         </section>
       </main>
