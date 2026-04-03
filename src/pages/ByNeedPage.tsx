@@ -37,10 +37,8 @@ interface ByNeedData {
   features: string[];
   bottomNote?: string;
 }
-  illustration: string;
-  features: string[];
-  bottomNote?: string;
-}
+
+
 
 const byNeedData: Record<string, ByNeedData> = {
   "drive-growth": {
