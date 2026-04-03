@@ -10,6 +10,12 @@ import politicalIllust from "@/assets/byneed-political-illust.png";
 import personalIllust from "@/assets/byneed-personal-illust.png";
 import digitalIllust from "@/assets/byneed-digital-illust.png";
 
+import brushResults from "@/assets/brush-results.png";
+
+const brushImages: Record<string, string> = {
+  "results": brushResults,
+};
+
 interface ByNeedData {
   title: string[];
   brushWords: string[];
