@@ -63,8 +63,10 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Divider line */}
+      <div className="h-px bg-white/30" />
       {/* Copyright bar */}
-      <div className="bg-muted text-center text-xs text-muted-foreground py-3">
+      <div className="bg-primary text-center text-xs text-lime/50 py-3">
         © DigitalBee. All rights reserved.
       </div>
     </footer>
