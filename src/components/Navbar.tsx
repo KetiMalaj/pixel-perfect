@@ -57,7 +57,11 @@ const Navbar = () => {
             {byNeedOpen && (
               <>
                 {/* Triangle arrow */}
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-primary z-50" />
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 z-50">
+                  <svg width="18" height="10" viewBox="0 0 18 10">
+                    <polygon points="9,10 0,0 18,0" fill="hsl(var(--lime))" stroke="hsl(var(--primary))" strokeWidth="1.5" />
+                  </svg>
+                </div>
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-background border-t-2 border-primary py-6 px-8 w-80 z-50 text-center">
                   {byNeedItems.map((item) => (
                     <Link
