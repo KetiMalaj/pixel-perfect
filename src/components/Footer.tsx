@@ -64,7 +64,7 @@ const Footer = () => {
       </div>
 
       {/* Divider line */}
-      <div className="h-px bg-white/30" />
+      <div className="h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.4) 30%, rgba(255,255,255,0.4) 70%, transparent)' }} />
       {/* Copyright bar */}
       <div className="bg-primary text-center text-xs text-lime/50 py-3">
         © DigitalBee. All rights reserved.
