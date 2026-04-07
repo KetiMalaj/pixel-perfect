@@ -71,7 +71,7 @@ const HeroSlider = () => {
                 </h1>
               </div>
 
-              <p className="mt-6 text-muted-foreground text-base max-w-md leading-relaxed">
+              <p className="mt-6 text-primary/70 text-base max-w-md leading-relaxed">
                 {slides[current].description}
               </p>
 
