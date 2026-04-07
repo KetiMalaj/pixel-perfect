@@ -5,17 +5,17 @@ const Footer = () => {
     <footer>
       {/* Decorative lime bar - faded edges */}
       <div className="flex h-3 justify-center">
-        <div className="w-10 bg-lime opacity-15" />
-        <div className="w-10 bg-lime opacity-30" />
-        <div className="w-12 bg-lime opacity-50" />
-        <div className="w-14 bg-lime opacity-70" />
-        <div className="w-16 bg-lime opacity-85" />
-        <div className="w-[28%] bg-lime" />
-        <div className="w-16 bg-lime opacity-85" />
-        <div className="w-14 bg-lime opacity-70" />
-        <div className="w-12 bg-lime opacity-50" />
-        <div className="w-10 bg-lime opacity-30" />
-        <div className="w-10 bg-lime opacity-15" />
+        <div className="w-16 bg-lime opacity-10" />
+        <div className="w-16 bg-lime opacity-25" />
+        <div className="w-20 bg-lime opacity-40" />
+        <div className="w-20 bg-lime opacity-60" />
+        <div className="w-24 bg-lime opacity-80" />
+        <div className="flex-1 bg-lime" />
+        <div className="w-24 bg-lime opacity-80" />
+        <div className="w-20 bg-lime opacity-60" />
+        <div className="w-20 bg-lime opacity-40" />
+        <div className="w-16 bg-lime opacity-25" />
+        <div className="w-16 bg-lime opacity-10" />
       </div>
 
       <div className="bg-primary text-lime">
