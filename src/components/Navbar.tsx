@@ -69,10 +69,10 @@ const Navbar = () => {
                       to={item.path}
                       onClick={() => setByNeedOpen(false)}
                       className={`block py-2 text-sm hover:text-primary transition ${
-                        isActive(item.path) ? "text-primary font-bold" : "text-foreground"
+                        isActive(item.path) ? "text-primary font-bold" : "text-primary"
                       }`}
                     >
-                      {isActive(item.path) && <span className="mr-1.5 text-primary">▶</span>}
+                      {isActive(item.path) && <span className="mr-1.5 text-lime" style={{ WebkitTextStroke: '0.5px hsl(var(--primary))' }}>▶</span>}
                       {item.label}
                     </Link>
                   ))}
