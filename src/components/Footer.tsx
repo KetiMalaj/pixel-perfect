@@ -25,9 +25,9 @@ const Footer = () => {
             <h4 className="font-handwritten text-lime text-2xl font-bold mb-1">Office Location:</h4>
             <p className="text-sm">Rr. "Themistokli Gërmenji",</p>
             <p className="text-sm">Nr. 1, Unit 9, Tirana, 1010</p>
-            <p className="mt-4">
-              <span className="font-handwritten text-lime text-2xl font-bold">Call: </span>
-              <span className="text-sm"> +355 69 800 2500</span>
+            <p className="mt-4 flex items-center gap-2">
+              <span className="font-handwritten text-lime text-2xl font-bold">Call:</span>
+              <span className="text-sm">+355 69 800 2500</span>
             </p>
           </div>
 
