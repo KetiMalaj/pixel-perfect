@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Caveat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 254 95% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 240 10% 15%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 68 100% 45%;
+    --accent-foreground: 240 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 254 95% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --footer-bg: 254 95% 50%;
+    --footer-foreground: 0 0% 100%;
+    --lime: 68 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-handwritten {
+    font-family: 'Caveat', cursive;
+  }
+  
+  .text-highlight {
+    background-color: hsl(var(--lime));
+    padding: 2px 8px;
+    display: inline-block;
+  }
+
+  .highlight-oval {
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight-oval::after {
+    content: '';
+    position: absolute;
+    inset: -6px -12px;
+    border: 2.5px solid hsl(var(--lime));
+    border-radius: 50%;
+    transform: rotate(-3deg);
+    pointer-events: none;
+  }
+
+  .highlight-brush {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+  }
+
+  .highlight-brush::before {
+    content: '';
+    position: absolute;
+    top: -15%;
+    left: -12px;
+    right: -25px;
+    bottom: -15%;
+    background: hsl(var(--primary));
+    pointer-events: none;
+    z-index: -1;
+    clip-path: polygon(
+      0% 20%, 2% 8%, 8% 2%, 15% 0%, 22% 5%, 30% 0%, 40% 3%,
+      50% 0%, 58% 2%, 65% 0%, 72% 4%, 80% 0%, 88% 3%,
+      95% 0%, 100% 8%, 100% 18%, 98% 30%, 100% 42%,
+      98% 55%, 100% 68%, 99% 80%, 100% 90%, 97% 98%,
+      90% 100%, 82% 96%, 75% 100%, 68% 97%, 60% 100%,
+      50% 98%, 42% 100%, 35% 97%, 25% 100%, 18% 98%,
+      10% 100%, 4% 96%, 0% 88%, 1% 72%, 0% 58%, 2% 42%, 0% 30%
+    );
+  }
+}
