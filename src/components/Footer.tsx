@@ -50,7 +50,7 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="flex items-center justify-end relative">
-            <div className="hidden md:block absolute left-0 top-1/4 bottom-1/4 border-l border-dotted border-white/30" />
+            <div className="hidden md:block absolute left-0 top-1/4 bottom-1/4 w-px bg-white/40" />
             <a
               href="#"
               className="border border-lime text-lime px-6 py-2 text-sm font-bold tracking-wider flex items-center gap-3 hover:bg-lime hover:text-primary transition"
