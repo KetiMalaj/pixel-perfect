@@ -39,21 +39,20 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link to="/" className={`hover:text-primary transition ${isActive("/") ? "text-primary font-bold" : "text-foreground"}`}>
+          <Link to="/" className={`hover:text-primary transition relative pb-1 ${isActive("/") ? "text-primary font-bold" : "text-foreground"}`}>
             Home
+            {isActive("/") && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-lime" />}
           </Link>
           <Link to="/" className="text-foreground hover:text-primary transition">Services</Link>
           
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setByNeedOpen(!byNeedOpen)}
-              className={`flex flex-col items-center hover:text-primary transition ${isByNeedActive ? "text-primary font-bold" : "text-foreground"}`}
-            >
-              By Need
-              {isByNeedActive && (
-                <span className="w-0 h-0 border-l-[5px] border-r-[5px] border-t-[5px] border-l-transparent border-r-transparent border-t-primary mt-0.5" />
-              )}
-            </button>
+            className={`flex flex-col items-center hover:text-primary transition relative pb-1 ${isByNeedActive ? "text-primary font-bold" : "text-foreground"}`}
+          >
+            By Need
+            {isByNeedActive && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-lime" />}
+          </button>
             
             {byNeedOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-background shadow-lg border border-border rounded-sm py-4 px-6 w-80 z-50">
@@ -93,9 +92,9 @@ const Navbar = () => {
           </div>
           <div className="w-px h-6 bg-lime" />
           <button className="flex flex-col gap-1.5" onClick={() => setMenuOpen(!menuOpen)}>
-            <span className="w-6 h-0.5 bg-primary" />
-            <span className="w-6 h-0.5 bg-primary" />
-            <span className="w-6 h-0.5 bg-primary" />
+            <span className="w-7 h-0.5 bg-primary" />
+            <span className="w-5 h-0.5 bg-primary ml-auto" />
+            <span className="w-7 h-0.5 bg-primary" />
           </button>
         </div>
       </div>
