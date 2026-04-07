@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="hidden md:block h-10 w-px bg-white/40" />
             <a
               href="#"
-              className="border border-lime text-lime px-6 py-2 text-sm font-bold tracking-wider flex items-center gap-3 hover:bg-lime hover:text-primary transition"
+              className="border border-lime text-lime px-6 py-2 text-base font-bold tracking-wider flex items-center gap-3 hover:bg-lime hover:text-primary transition"
             >
               NEWSLETTER
               <span className="border border-lime w-6 h-6 flex items-center justify-center">
