@@ -92,9 +92,9 @@ const Navbar = () => {
           </div>
           <div className="w-px h-6 bg-lime" />
           <button className="flex flex-col gap-1.5" onClick={() => setMenuOpen(!menuOpen)}>
-            <span className="w-6 h-0.5 bg-primary" />
-            <span className="w-6 h-0.5 bg-primary" />
-            <span className="w-6 h-0.5 bg-primary" />
+            <span className="w-7 h-0.5 bg-primary" />
+            <span className="w-5 h-0.5 bg-primary ml-auto" />
+            <span className="w-7 h-0.5 bg-primary" />
           </button>
         </div>
       </div>
