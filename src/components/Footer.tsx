@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
 
       <div className="bg-primary text-lime">
-        <div className="max-w-6xl mx-auto px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-8" style={{ gridTemplateColumns: '1fr auto 1fr 1fr' }}>
           {/* Office Location */}
           <div>
             <h4 className="font-handwritten text-lime text-2xl font-bold mb-1">Office Location:</h4>
@@ -30,6 +30,9 @@ const Footer = () => {
               <span className="text-xs font-light text-lime/70">+355 69 800 2500</span>
             </p>
           </div>
+
+          {/* Dotted vertical divider */}
+          <div className="hidden md:block border-l border-dotted border-white/30 self-stretch" />
 
           {/* Email & Socials */}
           <div>
