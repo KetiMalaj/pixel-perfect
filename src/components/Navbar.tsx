@@ -48,13 +48,11 @@ const Navbar = () => {
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setByNeedOpen(!byNeedOpen)}
-              className={`flex flex-col items-center hover:text-primary transition ${isByNeedActive ? "text-primary font-bold" : "text-foreground"}`}
-            >
-              By Need
-              {isByNeedActive && (
-                <span className="w-0 h-0 border-l-[5px] border-r-[5px] border-t-[5px] border-l-transparent border-r-transparent border-t-primary mt-0.5" />
-              )}
-            </button>
+            className={`flex flex-col items-center hover:text-primary transition relative pb-1 ${isByNeedActive ? "text-primary font-bold" : "text-foreground"}`}
+          >
+            By Need
+            {isByNeedActive && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-lime" />}
+          </button>
             
             {byNeedOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-background shadow-lg border border-border rounded-sm py-4 px-6 w-80 z-50">
