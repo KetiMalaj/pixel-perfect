@@ -65,13 +65,13 @@ const HeroSlider = () => {
             >
               {/* Vertical accent line + title */}
               <div className="flex items-start gap-4">
-                <div className="w-1 bg-primary self-stretch min-h-[80px] mt-2" />
+                <div className="w-1 bg-lime self-stretch min-h-[80px] mt-2" />
                 <h1 className="text-5xl md:text-6xl font-black text-primary leading-tight whitespace-pre-line">
                   {slides[current].title}
                 </h1>
               </div>
 
-              <p className="mt-6 text-muted-foreground text-base max-w-md leading-relaxed">
+              <p className="mt-6 text-primary/70 text-base max-w-md leading-relaxed">
                 {slides[current].description}
               </p>
 
