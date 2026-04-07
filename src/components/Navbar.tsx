@@ -39,8 +39,9 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link to="/" className={`hover:text-primary transition ${isActive("/") ? "text-primary font-bold" : "text-foreground"}`}>
+          <Link to="/" className={`hover:text-primary transition relative pb-1 ${isActive("/") ? "text-primary font-bold" : "text-foreground"}`}>
             Home
+            {isActive("/") && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-lime" />}
           </Link>
           <Link to="/" className="text-foreground hover:text-primary transition">Services</Link>
           
