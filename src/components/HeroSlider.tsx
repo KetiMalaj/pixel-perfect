@@ -41,15 +41,15 @@ const HeroSlider = () => {
         {/* Left content */}
         <div className="relative">
           {/* Dot navigation */}
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -ml-8 flex flex-col gap-2 items-center">
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 -ml-8 flex flex-col gap-3 items-center">
             {slides.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
                 className={`rounded-full transition-all ${
                   i === current
-                    ? "w-3 h-3 border-2 border-primary bg-transparent"
-                    : "w-1.5 h-1.5 bg-primary/40"
+                    ? "w-2.5 h-2.5 border border-primary bg-transparent"
+                    : "w-1 h-1 bg-primary/50"
                 }`}
               />
             ))}
