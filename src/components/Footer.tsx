@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="bg-primary text-lime">
         <div className="max-w-6xl mx-auto px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {/* Dotted vertical divider between col 1 and col 2 */}
-          <div className="hidden md:block absolute top-10 bottom-10 left-[33.33%] border-l border-dotted border-white/30" />
+          <div className="hidden md:block absolute top-10 bottom-10 left-[30%] border-l border-dotted border-white/30" />
 
           {/* Office Location */}
           <div>
