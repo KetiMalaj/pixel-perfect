@@ -48,27 +48,32 @@ const Navbar = () => {
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setByNeedOpen(!byNeedOpen)}
-            className={`flex flex-col items-center hover:text-primary transition relative pb-1 ${isByNeedActive ? "text-primary font-bold" : "text-foreground"}`}
-          >
-            By Need
-            {isByNeedActive && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-lime" />}
-          </button>
+              className={`flex flex-col items-center hover:text-primary transition relative pb-1 ${isByNeedActive ? "text-primary font-bold" : "text-foreground"}`}
+            >
+              By Need
+              {isByNeedActive && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-lime" />}
+            </button>
             
             {byNeedOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-background shadow-lg border border-border rounded-sm py-4 px-6 w-80 z-50">
-                {byNeedItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setByNeedOpen(false)}
-                    className={`block py-2 text-center text-sm hover:text-primary transition ${
-                      isActive(item.path) ? "text-primary font-semibold" : "text-foreground"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
+              <>
+                {/* Triangle arrow */}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-primary z-50" />
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-background border-t-2 border-primary py-6 px-8 w-80 z-50 text-center">
+                  {byNeedItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setByNeedOpen(false)}
+                      className={`block py-2 text-sm hover:text-primary transition ${
+                        isActive(item.path) ? "text-primary font-bold" : "text-foreground"
+                      }`}
+                    >
+                      {isActive(item.path) && <span className="mr-1.5 text-primary">▶</span>}
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </>
             )}
           </div>
           
