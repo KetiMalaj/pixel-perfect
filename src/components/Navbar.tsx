@@ -15,6 +15,7 @@ const byNeedItems = [
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [byNeedOpen, setByNeedOpen] = useState(false);
+  const [activeNav, setActiveNav] = useState<string | null>(null);
   const location = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -28,7 +29,6 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  const isActive = (path: string) => location.pathname === path;
   const isByNeedActive = location.pathname.startsWith("/by-need");
 
   return (
@@ -39,45 +39,45 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link to="/" className={`hover:text-primary transition relative pb-1 ${isActive("/") ? "text-primary font-bold" : "text-foreground"}`}>
+          <Link to="/" onClick={() => setActiveNav("home")} className={`hover:text-primary transition relative pb-1 ${activeNav === "home" ? "text-primary font-bold" : "text-foreground"}`}>
             Home
-            {isActive("/") && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-lime" />}
+            {activeNav === "home" && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-lime" />}
           </Link>
           <Link to="/" className="text-foreground hover:text-primary transition">Services</Link>
           
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setByNeedOpen(!byNeedOpen)}
-              className={`flex flex-col items-center hover:text-primary transition relative pb-1 ${isByNeedActive ? "text-primary font-bold" : "text-foreground"}`}
+              className={`flex flex-col items-center hover:text-primary transition relative pb-1 ${isByNeedActive || byNeedOpen ? "text-primary font-bold" : "text-foreground"}`}
             >
               By Need
-              {isByNeedActive && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-lime" />}
+              {(isByNeedActive || byNeedOpen) && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-lime" />}
             </button>
             
             {byNeedOpen && (
-              <>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 z-50 flex flex-col items-center">
                 {/* Triangle arrow */}
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 z-50">
-                  <svg width="18" height="10" viewBox="0 0 18 10">
-                    <polygon points="9,10 0,0 18,0" fill="hsl(var(--lime))" stroke="hsl(var(--primary))" strokeWidth="1.5" />
-                  </svg>
-                </div>
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-background border-t-2 border-primary py-6 px-8 w-80 z-50 text-center">
-                  {byNeedItems.map((item) => (
+                <svg width="20" height="11" viewBox="0 0 20 11">
+                  <polygon points="10,11 0,0 20,0" fill="blue" />
+                </svg>
+                <div className="bg-background border-t-2 border-primary py-6 px-8 w-80 text-center">
+                  {byNeedItems.map((item, index) => (
                     <Link
                       key={item.path}
                       to={item.path}
                       onClick={() => setByNeedOpen(false)}
-                      className={`block py-2 text-sm hover:text-primary transition ${
-                        isActive(item.path) ? "text-primary font-bold" : "text-primary"
+                      className={`flex items-center justify-center gap-1.5 py-2 text-sm hover:text-primary transition text-primary ${
+                        index === 0 ? "font-bold" : "font-normal"
                       }`}
                     >
-                      {isActive(item.path) && <span className="mr-1.5 text-lime" style={{ WebkitTextStroke: '0.5px hsl(var(--primary))' }}>▶</span>}
+                      {index === 0 && (
+                        <span className="text-lime text-xs leading-none">▶</span>
+                      )}
                       {item.label}
                     </Link>
                   ))}
                 </div>
-              </>
+              </div>
             )}
           </div>
           
