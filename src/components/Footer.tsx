@@ -31,6 +31,9 @@ const Footer = () => {
             </p>
           </div>
 
+          {/* Dotted vertical divider */}
+          <div className="hidden md:block border-l border-dotted border-white/30 self-stretch" />
+
           {/* Email & Socials */}
           <div>
             <h4 className="font-handwritten text-lime text-2xl font-bold mb-1">e-mail:</h4>
