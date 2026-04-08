@@ -91,9 +91,10 @@ const byNeedData: Record<string, ByNeedData> = {
     ],
   },
   campaigns: {
-    title: ["Plan, ", "execute,", " and optimize campaigns that deliver ", "impact"],
+    title: ["Plan, ", "execute,", "\nand optimize campaigns that deliver ", "impact"],
     brushWords: ["execute,"],
     ovalWords: ["impact"],
+    lightWords: ["and optimize campaigns that deliver"],
     description: "We design and manage integrated campaigns that combine strategy, creativity, and data to reach and influence your audience effectively.",
     illustration: campaignsIllust,
     features: [
@@ -137,7 +138,7 @@ const byNeedData: Record<string, ByNeedData> = {
     ],
   },
   "digital-presence": {
-    title: ["Establish a ", "strong", " and effective online ", "foundation"],
+    title: ["Establish a ", "strong", "\nand effective ", "\nonline ", "foundation"],
     brushWords: ["strong"],
     ovalWords: ["foundation"],
     description: "We help you create or upgrade your digital presence to ensure your brand is visible, functional, and ready to perform.",
