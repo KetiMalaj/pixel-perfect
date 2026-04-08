@@ -82,9 +82,9 @@
   .highlight-oval::after {
     content: '';
     position: absolute;
-    inset: -6px -12px;
-    border: 2.5px solid hsl(var(--lime));
-    border-radius: 50%;
+    inset: -10px -25px;
+    border: 3.5px solid hsl(var(--lime));
+    border-radius: 55% 48% 52% 46% / 65% 50% 55% 42%;
     transform: rotate(-3deg);
     pointer-events: none;
   }

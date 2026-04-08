@@ -18,6 +18,15 @@ import brushExecute from "@/assets/brush-execute.png";
 import brushStrategy from "@/assets/brush-strategy.png";
 import brushVisibility from "@/assets/brush-visibility.png";
 import brushStrong from "@/assets/brush-strong.png";
+import ovalStrategies from "@/assets/page 1.png";
+import ovalMemorable from "@/assets/page 3.png";
+import ovalImpact from "@/assets/page 4.png";
+
+const ovalImages: Record<string, string> = {
+  "strategies": ovalStrategies,
+  "memorable": ovalMemorable,
+  "impact": ovalImpact,
+};
 
 const brushImages: Record<string, string> = {
   "results": brushResults,
@@ -194,6 +203,16 @@ const ByNeedPage = () => {
         );
       }
       if (data.ovalWords.includes(trimmed)) {
+        const ovalImg = ovalImages[trimmed];
+        if (ovalImg) {
+          return (
+            <span key={i}>{br}<img
+              src={ovalImg}
+              alt={trimmed}
+              className="inline-block h-[1.3em] align-baseline relative top-[0.15em]"
+            /></span>
+          );
+        }
         return (
           <span key={i}>{br}<span className="highlight-oval">
             {display}
