@@ -19,9 +19,15 @@ import brushStrategy from "@/assets/brush-strategy.png";
 import brushVisibility from "@/assets/brush-visibility.png";
 import brushStrong from "@/assets/brush-strong.png";
 import ovalStrategy from "@/assets/oval-strategy.png";
+import ovalStrategies from "@/assets/page 1.png";
+import ovalMemorable from "@/assets/page 3.png";
+import ovalImpact from "@/assets/page 4.png";
 
 const ovalImages: Record<string, string> = {
   "strategy": ovalStrategy,
+  "strategies": ovalStrategies,
+  "memorable": ovalMemorable,
+  "impact": ovalImpact,
 };
 
 const brushImages: Record<string, string> = {
@@ -96,9 +102,10 @@ const byNeedData: Record<string, ByNeedData> = {
     ],
   },
   campaigns: {
-    title: ["Plan, ", "execute,", " and optimize campaigns that deliver ", "impact"],
+    title: ["Plan, ", "execute,", "\nand optimize campaigns that deliver ", "impact"],
     brushWords: ["execute,"],
     ovalWords: ["impact"],
+    lightWords: ["and optimize campaigns that deliver"],
     description: "We design and manage integrated campaigns that combine strategy, creativity, and data to reach and influence your audience effectively.",
     illustration: campaignsIllust,
     features: [
@@ -142,7 +149,7 @@ const byNeedData: Record<string, ByNeedData> = {
     ],
   },
   "digital-presence": {
-    title: ["Establish a ", "strong", " and effective online ", "foundation"],
+    title: ["Establish a ", "strong", "\nand effective ", "\nonline ", "foundation"],
     brushWords: ["strong"],
     ovalWords: ["foundation"],
     description: "We help you create or upgrade your digital presence to ensure your brand is visible, functional, and ready to perform.",
@@ -202,14 +209,11 @@ const ByNeedPage = () => {
         const ovalImg = ovalImages[trimmed];
         if (ovalImg) {
           return (
-            <span key={i}>{br}<span className="inline-block h-[1.2em] relative -top-[0.05em] overflow-hidden align-baseline">
-              <img
-                src={ovalImg}
-                alt={trimmed}
-                className="h-[2.4em] object-contain relative"
-                style={{ marginTop: '-0.45em', marginBottom: '-0.75em', marginLeft: '-0.3em', marginRight: '-0.3em' }}
-              />
-            </span></span>
+            <span key={i}>{br}<img
+              src={ovalImg}
+              alt={trimmed}
+              className="inline-block h-[1.3em] align-baseline relative top-[0.15em]"
+            /></span>
           );
         }
         return (
