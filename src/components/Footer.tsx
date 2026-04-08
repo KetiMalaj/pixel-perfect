@@ -6,17 +6,17 @@ const Footer = () => {
     <footer>
       {/* Decorative lime bar - faded edges */}
       <div className="flex h-3 justify-center">
-        <div className="w-16 bg-lime opacity-10" />
-        <div className="w-16 bg-lime opacity-25" />
-        <div className="w-20 bg-lime opacity-40" />
-        <div className="w-20 bg-lime opacity-60" />
-        <div className="w-24 bg-lime opacity-80" />
+        <div className="bg-lime opacity-10" style={{ width: 142 }} />
+        <div className="bg-lime opacity-25" style={{ width: 142 }} />
+        <div className="bg-lime opacity-40" style={{ width: 142 }} />
+        <div className="bg-lime opacity-60" style={{ width: 142 }} />
+        <div className="bg-lime opacity-80" style={{ width: 142 }} />
         <div className="flex-1 bg-lime" />
-        <div className="w-24 bg-lime opacity-80" />
-        <div className="w-20 bg-lime opacity-60" />
-        <div className="w-20 bg-lime opacity-40" />
-        <div className="w-16 bg-lime opacity-25" />
-        <div className="w-16 bg-lime opacity-10" />
+        <div className="bg-lime opacity-80" style={{ width: 142 }} />
+        <div className="bg-lime opacity-60" style={{ width: 142 }} />
+        <div className="bg-lime opacity-40" style={{ width: 142 }} />
+        <div className="bg-lime opacity-25" style={{ width: 142 }} />
+        <div className="bg-lime opacity-10" style={{ width: 142 }} />
       </div>
 
       <div className="bg-primary text-lime">
@@ -69,7 +69,7 @@ const Footer = () => {
       </div>
 
       {/* Divider line */}
-      <div className="h-[1px] mx-auto max-w-6xl" style={{ background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.6) 25%, rgba(255,255,255,0.6) 75%, transparent)' }} />
+      <div className="h-[1px] bg-lime" />
       {/* Copyright bar */}
       <div className="bg-primary text-center text-xs text-lime/50 py-3">
         © DigitalBee. All rights reserved.

@@ -9,6 +9,7 @@ import campaignsIllust from "@/assets/byneed-campaigns-illust.png";
 import politicalIllust from "@/assets/byneed-political-illust.png";
 import personalIllust from "@/assets/byneed-personal-illust.png";
 import digitalIllust from "@/assets/byneed-digital-illust.png";
+import linePng from "@/assets/line.png";
 
 import brushResults from "@/assets/brush-results.png";
 import brushInsights from "@/assets/brush-insights.png";
@@ -215,7 +216,7 @@ const ByNeedPage = () => {
                 Our approach combines research, technology, and messaging to design and execute effective political and public affairs strategies.
               </p>
             )}
-            <div className="w-12 h-0.5 bg-primary mt-6" />
+            <img src={linePng} alt="" className="mt-6 h-[3px] w-12 object-cover" />
           </div>
           <div className="flex justify-center md:justify-end">
             <img src={data.illustration} alt="" className="w-full max-w-sm object-contain" />
