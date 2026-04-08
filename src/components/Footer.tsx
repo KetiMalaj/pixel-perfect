@@ -66,13 +66,13 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
 
-      {/* Divider line */}
-      <div className="h-[1px] bg-lime" />
-      {/* Copyright bar */}
-      <div className="bg-primary text-center text-xs text-lime/50 py-3">
-        © DigitalBee. All rights reserved.
+        {/* Divider line */}
+        <div className="w-full h-[1px]" style={{ background: 'linear-gradient(to right, transparent 0%, rgba(255,255,255,0.5) 30%, rgba(255,255,255,0.5) 70%, transparent 100%)' }} />
+        {/* Copyright bar */}
+        <div className="text-center text-xs text-lime/50 py-3">
+          © DigitalBee. All rights reserved.
+        </div>
       </div>
     </footer>
   );
