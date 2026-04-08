@@ -33,6 +33,7 @@ interface ByNeedData {
   title: string[];
   brushWords: string[];
   ovalWords: string[];
+  lightWords?: string[];
   description: string;
   illustration: string;
   features: string[];
@@ -43,9 +44,10 @@ interface ByNeedData {
 
 const byNeedData: Record<string, ByNeedData> = {
   "drive-growth": {
-    title: ["Accelerate ", "results", " through data-driven ", "digital ", "strategies"],
+    title: ["Accelerate ", "results", " through data-driven ", "\ndigital ", "strategies"],
     brushWords: ["results"],
     ovalWords: ["strategies"],
+    lightWords: ["through data-driven"],
     description: "We help businesses grow by combining performance marketing, technology, and continuous optimization.",
     illustration: growthIllust,
     features: [
@@ -73,9 +75,10 @@ const byNeedData: Record<string, ByNeedData> = {
     ],
   },
   "build-brand": {
-    title: ["Create a ", "brand", " that is clear, consistent, and ", "memorable"],
+    title: ["Create a ", "brand", "\nthat is ", "clear,", "\nconsistent,", "\nand ", "memorable"],
     brushWords: ["brand"],
     ovalWords: ["memorable"],
+    lightWords: ["that is", "consistent,", "and"],
     description: "We develop strong brand identities and positioning strategies that differentiate you in the market and connect with the right audience.",
     illustration: brandIllust,
     features: [
@@ -168,33 +171,39 @@ const ByNeedPage = () => {
 
   const renderTitle = () => {
     return data.title.map((part, i) => {
-      const trimmed = part.trim();
+      const hasBreak = part.startsWith("\n");
+      const display = hasBreak ? part.slice(1) : part;
+      const trimmed = display.trim();
+      const br = hasBreak ? <br key={`br-${i}`} /> : null;
+
       if (data.brushWords.includes(trimmed)) {
         const brushImg = brushImages[trimmed];
         if (brushImg) {
           return (
-            <img
-              key={i}
+            <span key={i}>{br}<img
               src={brushImg}
               alt={trimmed}
               className="inline-block h-[1.1em] align-baseline relative -top-[0.05em]"
-            />
+            /></span>
           );
         }
         return (
-          <span key={i} className="highlight-brush font-handwritten text-lime">
-            {part}
-          </span>
+          <span key={i}>{br}<span className="highlight-brush font-handwritten text-lime">
+            {display}
+          </span></span>
         );
       }
       if (data.ovalWords.includes(trimmed)) {
         return (
-          <span key={i} className="highlight-oval font-handwritten text-lime">
-            {part}
-          </span>
+          <span key={i}>{br}<span className="highlight-oval">
+            {display}
+          </span></span>
         );
       }
-      return <span key={i}>{part}</span>;
+      if (data.lightWords?.includes(trimmed)) {
+        return <span key={i}>{br}<span className="font-normal">{display}</span></span>;
+      }
+      return <span key={i}>{br}{display}</span>;
     });
   };
 
