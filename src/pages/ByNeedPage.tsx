@@ -18,6 +18,11 @@ import brushExecute from "@/assets/brush-execute.png";
 import brushStrategy from "@/assets/brush-strategy.png";
 import brushVisibility from "@/assets/brush-visibility.png";
 import brushStrong from "@/assets/brush-strong.png";
+import ovalStrategy from "@/assets/oval-strategy.png";
+
+const ovalImages: Record<string, string> = {
+  "strategy": ovalStrategy,
+};
 
 const brushImages: Record<string, string> = {
   "results": brushResults,
@@ -194,6 +199,19 @@ const ByNeedPage = () => {
         );
       }
       if (data.ovalWords.includes(trimmed)) {
+        const ovalImg = ovalImages[trimmed];
+        if (ovalImg) {
+          return (
+            <span key={i}>{br}<span className="inline-block h-[1.2em] relative -top-[0.05em] overflow-hidden align-baseline">
+              <img
+                src={ovalImg}
+                alt={trimmed}
+                className="h-[2.4em] object-contain relative"
+                style={{ marginTop: '-0.45em', marginBottom: '-0.75em', marginLeft: '-0.3em', marginRight: '-0.3em' }}
+              />
+            </span></span>
+          );
+        }
         return (
           <span key={i}>{br}<span className="highlight-oval">
             {display}
@@ -214,7 +232,7 @@ const ByNeedPage = () => {
         {/* Hero */}
         <section className="max-w-6xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div>
-            <h1 className="text-4xl md:text-5xl font-black text-primary leading-tight">
+            <h1 className="text-5xl md:text-6xl font-black text-primary leading-[1.1]">
               {renderTitle()}
             </h1>
             <p className="mt-6 text-muted-foreground text-sm max-w-md leading-relaxed">
