@@ -133,14 +133,7 @@ const Navbar = () => {
         }`}
         style={{ top: navHeight, height: `calc(100vh - ${navHeight}px)` }}
       >
-        {/* Watermark background text */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-          <span className="text-[8vw] font-bold text-gray-100 whitespace-nowrap tracking-wide">
-            Marketing &amp; Research
-          </span>
-        </div>
-
-        {/* Menu links */}
+{/* Menu links */}
         <div className="relative z-10 flex flex-col items-center pt-4 gap-1" style={{ marginRight: 75 }}>
           {byNeedItems.map((item) => (
               <Link
