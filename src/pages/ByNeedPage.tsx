@@ -19,13 +19,21 @@ import brushStrategy from "@/assets/brush-strategy.png";
 import brushVisibility from "@/assets/brush-visibility.png";
 import brushStrong from "@/assets/brush-strong.png";
 import ovalStrategies from "@/assets/page 1.png";
+import ovalStrategy from "@/assets/page 2.png";
 import ovalMemorable from "@/assets/page 3.png";
 import ovalImpact from "@/assets/page 4.png";
+import ovalEngagement from "@/assets/page 5.png";
+import ovalInfluence from "@/assets/page 6.png";
+import ovalFoundation from "@/assets/page 7.png";
 
 const ovalImages: Record<string, string> = {
   "strategies": ovalStrategies,
+  "strategy": ovalStrategy,
   "memorable": ovalMemorable,
   "impact": ovalImpact,
+  "engagement": ovalEngagement,
+  "influence": ovalInfluence,
+  "foundation": ovalFoundation,
 };
 
 const brushImages: Record<string, string> = {
@@ -210,7 +218,8 @@ const ByNeedPage = () => {
             <span key={i}>{br}<img
               src={ovalImg}
               alt={trimmed}
-              className="inline-block h-[1.3em] align-baseline relative top-[0.15em]"
+              className="inline h-[1.4em] align-baseline relative -top-[0.05em]"
+              style={{ display: 'inline', verticalAlign: 'baseline' }}
             /></span>
           );
         }
@@ -234,7 +243,7 @@ const ByNeedPage = () => {
         {/* Hero */}
         <section className="max-w-6xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div>
-            <h1 className="text-4xl md:text-5xl font-black text-primary leading-tight">
+            <h1 className="text-5xl md:text-6xl font-black text-primary leading-[1.1]">
               {renderTitle()}
             </h1>
             <p className="mt-6 text-muted-foreground text-sm max-w-md leading-relaxed">
