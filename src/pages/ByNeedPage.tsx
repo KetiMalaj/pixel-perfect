@@ -225,35 +225,35 @@ const ByNeedPage = () => {
 
         {/* Features Grid */}
         <section className="max-w-6xl mx-auto px-8 pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr_1px_1fr] py-10">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5px_1fr_1.5px_1fr] py-10 overflow-visible relative">
             {/* Column 1 */}
             <div className="flex flex-col pr-10">
               {data.features.filter((_, i) => i % 3 === 0).map((f, i, arr) => (
                 <div key={i}>
                   <p className="text-sm text-foreground py-8" dangerouslySetInnerHTML={{ __html: f }} />
-                  {i < arr.length - 1 && <hr className="border-t border-border" />}
+                  {i < arr.length - 1 && <hr className="features-hr" />}
                 </div>
               ))}
             </div>
             {/* Divider */}
-            <div className="hidden md:block features-divider" />
+            <div className="hidden md:block features-divider self-center" style={{ height: '150%' }} />
             {/* Column 2 */}
             <div className="flex flex-col px-10">
               {data.features.filter((_, i) => i % 3 === 1).map((f, i, arr) => (
                 <div key={i}>
                   <p className="text-sm text-foreground py-8" dangerouslySetInnerHTML={{ __html: f }} />
-                  {i < arr.length - 1 && <hr className="border-t border-border" />}
+                  {i < arr.length - 1 && <hr className="features-hr" />}
                 </div>
               ))}
             </div>
             {/* Divider */}
-            <div className="hidden md:block features-divider" />
+            <div className="hidden md:block features-divider self-center" style={{ height: '150%' }} />
             {/* Column 3 */}
             <div className="flex flex-col pl-10">
               {data.features.filter((_, i) => i % 3 === 2).map((f, i, arr) => (
                 <div key={i}>
                   <p className="text-sm text-foreground py-8" dangerouslySetInnerHTML={{ __html: f }} />
-                  {i < arr.length - 1 && <hr className="border-t border-border" />}
+                  {i < arr.length - 1 && <hr className="features-hr" />}
                 </div>
               ))}
             </div>

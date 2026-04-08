@@ -113,22 +113,33 @@
     mask-image: linear-gradient(to right, transparent 0%, black 32%, black 68%, transparent 100%);
   }
 
+  .features-hr {
+    height: 1px;
+    border: none;
+    background-image: radial-gradient(circle, hsl(var(--primary) / 0.4) 0.5px, transparent 0.5px);
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+    background-position: left center;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
+
   .features-divider {
     display: block;
     background: linear-gradient(
       to bottom,
       hsla(254, 70%, 85%, 0) 0%,
-      hsla(254, 70%, 80%, 0.3) 8%,
+      hsla(254, 70%, 80%, 0.3) 16%,
       hsl(254, 95%, 50%) 50%,
-      hsla(254, 70%, 80%, 0.3) 92%,
+      hsla(254, 70%, 80%, 0.3) 84%,
       hsla(254, 70%, 85%, 0) 100%
     );
-    -webkit-mask-image: radial-gradient(circle, black 1px, transparent 1px);
-    -webkit-mask-size: 2px 5px;
+    -webkit-mask-image: radial-gradient(circle, black 0.5px, transparent 0.5px);
+    -webkit-mask-size: 1px 4px;
     -webkit-mask-repeat: repeat-y;
     -webkit-mask-position: center top;
-    mask-image: radial-gradient(circle, black 1px, transparent 1px);
-    mask-size: 2px 5px;
+    mask-image: radial-gradient(circle, black 0.5px, transparent 0.5px);
+    mask-size: 1px 4px;
     mask-repeat: repeat-y;
     mask-position: center top;
   }

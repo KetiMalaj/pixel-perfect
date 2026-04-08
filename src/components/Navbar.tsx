@@ -48,15 +48,23 @@ const Navbar = () => {
   return (
     <>
       <nav ref={navRef} className="relative z-50 flex flex-col bg-white">
+        {/* Top gradient line — block by block */}
+        <div className="flex h-[5px] w-full">
+          <div className="flex-1 bg-primary" />
+          <div className="flex-1 bg-primary opacity-75" />
+          <div className="flex-1 bg-primary opacity-50" />
+          <div className="flex-1 bg-primary opacity-30" />
+          <div className="flex-1 bg-primary opacity-15" />
+        </div>
         <div className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
           <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Digital Bee" className="h-14" />
           </Link>
 
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+          <div className="hidden md:flex items-center gap-10 text-sm font-light tracking-wide">
             <Link
               to="/"
-              className={`hover:text-primary transition relative pb-1 ${isHomeActive ? "text-primary font-bold" : "text-foreground"}`}
+              className={`hover:text-primary transition relative pb-1 ${isHomeActive ? "text-primary font-semibold" : "text-foreground"}`}
             >
               Home
               {isHomeActive && <span className="absolute bottom-0 left-0 w-full h-[1px] bg-lime" />}
@@ -67,7 +75,7 @@ const Navbar = () => {
               <button
                 ref={byNeedBtnRef}
                 onClick={() => setByNeedOpen(!byNeedOpen)}
-                className={`hover:text-primary transition relative pb-1 ${isByNeedActive || byNeedOpen ? "text-primary font-bold" : "text-foreground"}`}
+                className={`hover:text-primary transition relative pb-1 ${isByNeedActive || byNeedOpen ? "text-primary font-semibold" : "text-foreground"}`}
               >
                 By Need
                 {(isByNeedActive || byNeedOpen) && <span className="absolute bottom-0 left-0 w-full h-[1px] bg-lime" />}
@@ -111,8 +119,10 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        {/* Dotted bottom border */}
-        <div className="w-full border-b border-dashed border-primary/40" />
+        {/* Dotted bottom border — aligned with content */}
+        <div className="max-w-7xl mx-auto w-full px-8">
+          <div className="navbar-separator w-full" style={{ margin: 0 }} />
+        </div>
       </nav>
 
       {/* Full-width mega-menu panel */}
@@ -131,13 +141,13 @@ const Navbar = () => {
         </div>
 
         {/* Menu links */}
-        <div className="relative z-10 flex flex-col items-center pt-6 gap-1">
+        <div className="relative z-10 flex flex-col items-center pt-4 gap-1" style={{ marginRight: 75 }}>
           {byNeedItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={() => setByNeedOpen(false)}
-                className="group flex items-center justify-center gap-1.5 py-2 text-sm text-foreground hover:text-primary hover:font-bold transition"
+                className="group flex items-center justify-center gap-1.5 py-2.5 text-base text-primary hover:font-bold transition"
               >
                 <span className="text-lime text-xs leading-none opacity-0 group-hover:opacity-100 transition" style={{ WebkitTextStroke: '0.5px hsl(var(--primary))' }}>▶</span>
                 {item.label}
