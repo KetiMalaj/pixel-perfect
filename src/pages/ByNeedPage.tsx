@@ -18,16 +18,22 @@ import brushExecute from "@/assets/brush-execute.png";
 import brushStrategy from "@/assets/brush-strategy.png";
 import brushVisibility from "@/assets/brush-visibility.png";
 import brushStrong from "@/assets/brush-strong.png";
-import ovalStrategy from "@/assets/oval-strategy.png";
 import ovalStrategies from "@/assets/page 1.png";
+import ovalStrategy from "@/assets/page 2.png";
 import ovalMemorable from "@/assets/page 3.png";
 import ovalImpact from "@/assets/page 4.png";
+import ovalEngagement from "@/assets/page 5.png";
+import ovalInfluence from "@/assets/page 6.png";
+import ovalFoundation from "@/assets/page 7.png";
 
 const ovalImages: Record<string, string> = {
-  "strategy": ovalStrategy,
   "strategies": ovalStrategies,
+  "strategy": ovalStrategy,
   "memorable": ovalMemorable,
   "impact": ovalImpact,
+  "engagement": ovalEngagement,
+  "influence": ovalInfluence,
+  "foundation": ovalFoundation,
 };
 
 const brushImages: Record<string, string> = {
@@ -212,7 +218,8 @@ const ByNeedPage = () => {
             <span key={i}>{br}<img
               src={ovalImg}
               alt={trimmed}
-              className="inline-block h-[1.3em] align-baseline relative top-[0.15em]"
+              className="inline h-[1.4em] align-baseline relative -top-[0.05em]"
+              style={{ display: 'inline', verticalAlign: 'baseline' }}
             /></span>
           );
         }
