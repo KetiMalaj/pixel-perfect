@@ -225,12 +225,38 @@ const ByNeedPage = () => {
 
         {/* Features Grid */}
         <section className="max-w-6xl mx-auto px-8 pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-10">
-            {data.features.map((f, i) => (
-              <div key={i} className="border-t border-border pt-4">
-                <p className="text-sm text-foreground" dangerouslySetInnerHTML={{ __html: f }} />
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr_1px_1fr] py-10">
+            {/* Column 1 */}
+            <div className="flex flex-col pr-10">
+              {data.features.filter((_, i) => i % 3 === 0).map((f, i, arr) => (
+                <div key={i}>
+                  <p className="text-sm text-foreground py-8" dangerouslySetInnerHTML={{ __html: f }} />
+                  {i < arr.length - 1 && <hr className="border-t border-border" />}
+                </div>
+              ))}
+            </div>
+            {/* Divider */}
+            <div className="hidden md:block features-divider" />
+            {/* Column 2 */}
+            <div className="flex flex-col px-10">
+              {data.features.filter((_, i) => i % 3 === 1).map((f, i, arr) => (
+                <div key={i}>
+                  <p className="text-sm text-foreground py-8" dangerouslySetInnerHTML={{ __html: f }} />
+                  {i < arr.length - 1 && <hr className="border-t border-border" />}
+                </div>
+              ))}
+            </div>
+            {/* Divider */}
+            <div className="hidden md:block features-divider" />
+            {/* Column 3 */}
+            <div className="flex flex-col pl-10">
+              {data.features.filter((_, i) => i % 3 === 2).map((f, i, arr) => (
+                <div key={i}>
+                  <p className="text-sm text-foreground py-8" dangerouslySetInnerHTML={{ __html: f }} />
+                  {i < arr.length - 1 && <hr className="border-t border-border" />}
+                </div>
+              ))}
+            </div>
           </div>
           {data.bottomNote && (
             <p className="mt-12 text-center text-sm text-foreground max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: data.bottomNote }} />

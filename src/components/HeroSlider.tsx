@@ -41,18 +41,28 @@ const HeroSlider = () => {
         {/* Left content */}
         <div className="relative">
           {/* Dot navigation */}
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -ml-8 flex flex-col gap-3 items-center">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`rounded-full transition-all ${
-                  i === current
-                    ? "w-2.5 h-2.5 border border-primary bg-transparent"
-                    : "w-1 h-1 bg-primary/50"
-                }`}
-              />
-            ))}
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 -ml-8 flex flex-col gap-2 items-center">
+            {slides.map((_, i) => {
+              const distance = Math.abs(i - current);
+              const opacity = distance === 0 ? 1 : distance === 1 ? 0.5 : distance === 2 ? 0.25 : 0.1;
+              return (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className="relative flex items-center justify-center w-5 h-5 transition-all"
+                  style={{ opacity }}
+                >
+                  {i === current ? (
+                    <>
+                      <span className="absolute w-5 h-5 rounded-full border border-primary" style={{ borderWidth: '1px' }} />
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    </>
+                  ) : (
+                    <span className="w-1 h-1 rounded-full bg-primary" />
+                  )}
+                </button>
+              );
+            })}
           </div>
 
           <AnimatePresence mode="wait">
@@ -63,17 +73,21 @@ const HeroSlider = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
             >
-              {/* Vertical accent line + title */}
-              <div className="flex items-start gap-4">
-                <div className="w-1 bg-lime self-stretch min-h-[80px] mt-2" />
+              {/* Lime vertical line + title */}
+              <div className="flex items-stretch gap-4">
+                <div className="w-0.5 bg-lime flex-shrink-0" />
                 <h1 className="text-5xl md:text-6xl font-black text-primary leading-tight whitespace-pre-line">
                   {slides[current].title}
                 </h1>
               </div>
 
-              <p className="mt-6 text-primary/70 text-base max-w-md leading-relaxed">
-                {slides[current].description}
-              </p>
+              {/* Dotted vertical line + description */}
+              <div className="flex items-stretch gap-4 mt-10">
+                <div className="flex-shrink-0 w-1 hero-dot-line" />
+                <p className="text-primary/70 text-base max-w-md leading-relaxed">
+                  {slides[current].description}
+                </p>
+              </div>
 
               <button className="mt-6 bg-lime text-primary font-bold italic px-4 py-2 text-lg hover:brightness-95 transition">
                 Are you ready?
