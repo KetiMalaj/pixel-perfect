@@ -214,11 +214,12 @@ const ByNeedPage = () => {
       if (data.ovalWords.includes(trimmed)) {
         const ovalImg = ovalImages[trimmed];
         if (ovalImg) {
+          const topOffset = (trimmed === "strategy" || trimmed === "impact") ? "top-[0.2em]" : "-top-[0.05em]";
           return (
             <span key={i}>{br}<img
               src={ovalImg}
               alt={trimmed}
-              className="inline h-[1.4em] align-baseline relative -top-[0.05em]"
+              className={`inline h-[1.4em] align-baseline relative ${topOffset}`}
               style={{ display: 'inline', verticalAlign: 'baseline' }}
             /></span>
           );
