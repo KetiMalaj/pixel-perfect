@@ -255,7 +255,7 @@ const ByNeedPage = () => {
                 Our approach combines research, technology, and messaging to design and execute effective political and public affairs strategies.
               </p>
             )}
-            <img src={linePng} alt="" className="mt-6 h-[3px] w-12 object-cover" />
+            <img src={linePng} alt="" className="mt-6 h-[6px] w-24 object-cover" />
           </div>
           <div className="flex justify-center md:justify-end">
             <img src={data.illustration} alt="" className="w-full max-w-sm object-contain" />
