@@ -61,7 +61,7 @@ interface ByNeedData {
 
 const byNeedData: Record<string, ByNeedData> = {
   "drive-growth": {
-    title: ["Accelerate ", "results", " through data-driven ", "\ndigital ", "strategies"],
+    title: ["Accelerate ", "results", "\nthrough data-driven ", "\ndigital ", "strategies"],
     brushWords: ["results"],
     ovalWords: ["strategies"],
     lightWords: ["through data-driven"],
@@ -77,7 +77,7 @@ const byNeedData: Record<string, ByNeedData> = {
     ],
   },
   "understand-audience": {
-    title: ["Turn data into ", "Insights", " and insight into ", "strategy"],
+    title: ["Turn data", "\ninto ", "Insights", "\nand insight", "\ninto ", "strategy"],
     brushWords: ["Insights"],
     ovalWords: ["strategy"],
     description: "We provide a deep understanding of your market, customers, and audience behavior through advanced research and data platforms.",
@@ -214,14 +214,15 @@ const ByNeedPage = () => {
       if (data.ovalWords.includes(trimmed)) {
         const ovalImg = ovalImages[trimmed];
         if (ovalImg) {
-          const topOffset = (trimmed === "strategy" || trimmed === "impact") ? "top-[0.2em]" : "-top-[0.05em]";
+          const topOffset = (trimmed === "strategy" || trimmed === "impact") ? "top-[0.3em]" : "top-[0.3em]";
           return (
-            <span key={i}>{br}<img
+            <img
+              key={i}
               src={ovalImg}
               alt={trimmed}
-              className={`inline h-[1.4em] align-baseline relative ${topOffset}`}
+              className={`inline h-[1.1em] relative ${topOffset}`}
               style={{ display: 'inline', verticalAlign: 'baseline' }}
-            /></span>
+            />
           );
         }
         return (
@@ -244,7 +245,7 @@ const ByNeedPage = () => {
         {/* Hero */}
         <section className="max-w-6xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div>
-            <h1 className="text-5xl md:text-6xl font-black text-primary leading-[1.1]">
+            <h1 className="text-4xl md:text-5xl font-black text-primary leading-[1.1]">
               {renderTitle()}
             </h1>
             <p className="mt-6 text-muted-foreground text-sm max-w-md leading-relaxed">
