@@ -90,7 +90,7 @@ const Navbar = () => {
             <span className={`w-7 h-0.5 bg-primary transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
           </button>
 
-          <div className={`hidden md:flex items-center gap-10 text-sm font-light tracking-wide transition-all duration-300 ${desktopCompact ? "opacity-0 max-w-0 overflow-hidden" : "opacity-100 max-w-[800px]"}`}>
+          <div className={`hidden md:flex items-center gap-10 text-[1.2rem] font-light tracking-wide transition-all duration-300 ${desktopCompact ? "opacity-0 max-w-0 overflow-hidden" : "opacity-100 max-w-[800px]"}`}>
             <Link
               to="/"
               onClick={() => setActiveNav("home")}
