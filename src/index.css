@@ -177,12 +177,18 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-33.333%);
+      transform: translateX(-50%);
     }
   }
 
   .animate-scroll-logos {
-    animation: scroll-logos 30s linear infinite;
+    animation: scroll-logos 64s linear infinite;
+  }
+
+  @media (min-width: 768px) {
+    .animate-scroll-logos {
+      animation: scroll-logos 96s linear infinite;
+    }
   }
 
   .animate-scroll-logos:hover {

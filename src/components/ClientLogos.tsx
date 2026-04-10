@@ -25,18 +25,17 @@ const ClientLogos = () => {
     <section className="py-10 overflow-hidden">
       <div className="relative w-full">
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-white to-transparent z-10" />
 
-        {/* Scrolling track */}
-        <div className="flex animate-scroll-logos">
-          {/* Duplicate logos 3x for seamless loop */}
-          {[...logos, ...logos, ...logos].map((src, i) => (
-            <div key={i} className="flex-shrink-0 px-10 flex items-center justify-center w-[180px] md:w-[260px] h-[80px] md:h-[110px]">
+        {/* Scrolling track — two identical sets side by side */}
+        <div className="flex animate-scroll-logos" style={{ width: 'fit-content' }}>
+          {[...logos, ...logos].map((src, i) => (
+            <div key={i} className="flex-shrink-0 px-5 md:px-10 flex items-center justify-center w-[125px] md:w-[260px] h-[60px] md:h-[110px]">
               <img
                 src={src}
                 alt=""
-                className="h-[32px] md:h-[45px] w-auto object-contain opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300"
+                className="h-[28px] md:h-[45px] w-auto object-contain opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300"
               />
             </div>
           ))}

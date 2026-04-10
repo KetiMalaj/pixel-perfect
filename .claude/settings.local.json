@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where magick:*)",
+      "Bash(where inkscape:*)",
+      "Bash(where rsvg-convert:*)",
+      "Bash(pip install:*)",
+      "Bash(python -c \"import cairosvg; print\\('cairosvg available'\\)\")",
+      "Bash(npx sharp-cli:*)",
+      "Bash(node -e \"try{require\\('sharp'\\);console.log\\('sharp available'\\)}catch\\(e\\){console.log\\('sharp not available'\\)}\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/2.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/byneed-audience-illust.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/3.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/byneed-brand-illust.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/4.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/byneed-campaigns-illust.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/5.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/byneed-political-illust.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/6.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/byneed-personal-illust.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/l1.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/logo-balfin.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/l2.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/logo-tiranabank.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/l3.png\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/logo-1one.png\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/l4.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/logo-heineken.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/l5.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/logo-abi.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/9.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/illust-data-decisions.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/10.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/illust-brain-creative.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/11.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/illust-data-thumbsup.svg\")",
+      "Bash(cp \"c:/Users/Admin/Downloads/svg/12.svg\" \"C:/Users/Admin/Desktop/Dixidalbee/pixel-perfect/src/assets/illust-digitalbee-social.svg\")",
+      "Bash(node:*)",
+      "Bash(cp \"c:/Users/Admin/Pictures/logo good/Screenshot 2026-04-10 161220.png\" 01_balfin.png)",
+      "Bash(cp \"c:/Users/Admin/Pictures/logo good/Screenshot 2026-04-10 161233.png\" 02_tirana_bank.png)",
+      "Bash(cp \"c:/Users/Admin/Pictures/logo good/Screenshot 2026-04-10 161249.png\" 03_one.png)",
+      "Bash(cp \"c:/Users/Admin/Pictures/logo good/Screenshot 2026-04-10 161256.png\" 04_heineken.png)",
+      "Bash(cp \"c:/Users/Admin/Pictures/logo good/Screenshot 2026-04-10 161302.png\" 05_abi.png)",
+      "Bash(cp:*)"
+    ]
+  }
+}
