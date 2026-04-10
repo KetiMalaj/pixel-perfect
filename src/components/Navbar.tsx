@@ -15,6 +15,7 @@ const byNeedItems = [
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [byNeedOpen, setByNeedOpen] = useState(false);
+  const [activeNav, setActiveNav] = useState<string | null>(null);
   const [desktopCompact, setDesktopCompact] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -22,6 +23,16 @@ const Navbar = () => {
   const megaMenuRef = useRef<HTMLDivElement>(null);
   const byNeedBtnRef = useRef<HTMLButtonElement>(null);
   const [navHeight, setNavHeight] = useState(0);
+  const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = () => {
+    if (closeTimeout.current) clearTimeout(closeTimeout.current);
+    setByNeedOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimeout.current = setTimeout(() => setByNeedOpen(false), 200);
+  };
 
   useEffect(() => {
     if (navRef.current) {
@@ -50,10 +61,11 @@ const Navbar = () => {
   useEffect(() => {
     setMenuOpen(false);
     setByNeedOpen(false);
+    if (location.pathname.startsWith("/by-need")) setActiveNav(null);
   }, [location.pathname]);
 
   const isByNeedActive = location.pathname.startsWith("/by-need");
-  const isHomeActive = location.pathname === "/" && !isByNeedActive && !byNeedOpen;
+
 
   return (
     <>
@@ -81,14 +93,15 @@ const Navbar = () => {
           <div className={`hidden md:flex items-center gap-10 text-sm font-light tracking-wide transition-all duration-300 ${desktopCompact ? "opacity-0 max-w-0 overflow-hidden" : "opacity-100 max-w-[800px]"}`}>
             <Link
               to="/"
-              className={`hover:text-primary transition relative pb-1 whitespace-nowrap ${isHomeActive ? "text-primary font-semibold" : "text-foreground"}`}
+              onClick={() => setActiveNav("home")}
+              className={`group relative hover:text-primary hover:font-semibold transition pb-1 whitespace-nowrap ${activeNav === "home" ? "text-primary font-semibold" : "text-foreground"}`}
             >
               Home
-              {isHomeActive && <span className="absolute bottom-0 left-0 w-full h-[1px] bg-lime" />}
+              <span className={`absolute bottom-0 left-0 w-full h-[1px] bg-lime transition ${activeNav === "home" ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`} />
             </Link>
-            <Link to="/" className="text-foreground hover:text-primary transition pb-1 whitespace-nowrap">Services</Link>
+            <Link to="/" className="group relative text-foreground hover:text-primary hover:font-semibold transition pb-1 whitespace-nowrap">Services<span className="absolute bottom-0 left-0 w-full h-[1px] bg-lime opacity-0 group-hover:opacity-100 transition" /></Link>
 
-            <div className="relative">
+            <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               <button
                 ref={byNeedBtnRef}
                 onClick={() => setByNeedOpen(!byNeedOpen)}
@@ -110,8 +123,8 @@ const Navbar = () => {
               </div>
             </div>
 
-            <Link to="/" className="text-foreground hover:text-primary transition pb-1 whitespace-nowrap">About</Link>
-            <Link to="/" className="text-foreground hover:text-primary transition pb-1 whitespace-nowrap">Contact</Link>
+            <Link to="/" className="group relative text-foreground hover:text-primary hover:font-semibold transition pb-1 whitespace-nowrap">About<span className="absolute bottom-0 left-0 w-full h-[1px] bg-lime opacity-0 group-hover:opacity-100 transition" /></Link>
+            <Link to="/" className="group relative text-foreground hover:text-primary hover:font-semibold transition pb-1 whitespace-nowrap">Contact<span className="absolute bottom-0 left-0 w-full h-[1px] bg-lime opacity-0 group-hover:opacity-100 transition" /></Link>
           </div>
 
           <div className="hidden md:flex items-center gap-5">
@@ -131,7 +144,7 @@ const Navbar = () => {
               </div>
               <div className="w-px h-6 bg-lime" />
             </div>
-            <button className="flex flex-col items-center justify-center w-7 h-7" onClick={() => { setDesktopCompact(!desktopCompact); if (!desktopCompact) setByNeedOpen(false); }}>
+            <button className="flex flex-col items-center justify-center w-7 h-7">
               {desktopCompact ? (
                 <svg className="w-5 h-5 text-primary transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                   <polyline points="15 18 9 12 15 6" />
@@ -217,6 +230,8 @@ const Navbar = () => {
       {/* Full-width mega-menu panel (desktop only) */}
       <div
         ref={megaMenuRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         className={`hidden md:block fixed left-0 w-screen bg-white/90 z-40 overflow-hidden transition-opacity duration-300 ease-in-out ${
           byNeedOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
