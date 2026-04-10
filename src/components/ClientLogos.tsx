@@ -1,5 +1,5 @@
-import logo01 from "@/assets/clients/01_balfin.svg";
-import logo02 from "@/assets/clients/02_tirana_bank.svg";
+import logo01 from "@/assets/clients/01_balfin.png";
+import logo02 from "@/assets/clients/02_tirana_bank.png";
 import logo03 from "@/assets/clients/03_one.png";
 import logo04 from "@/assets/clients/04_heineken.svg";
 import logo05 from "@/assets/clients/05_abi.svg";
