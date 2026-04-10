@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import heroIllustration from "@/assets/hero-illustration.svg";
+import heroIllustrationMobile from "@/assets/hero-illustration-mobile.svg";
 
 const slides = [
   {
@@ -120,7 +121,16 @@ const HeroSlider = () => {
           </AnimatePresence>
         </div>
 
-        {/* Right illustration */}
+        {/* Mobile illustration — below the whole text/nav section, stays static */}
+        <div className="md:hidden flex justify-center mt-8">
+          <img
+            src={heroIllustrationMobile}
+            alt="Marketing blueprint illustration"
+            className="w-full max-w-[350px] object-contain"
+          />
+        </div>
+
+        {/* Right illustration — desktop only */}
         <div className="hidden md:flex justify-end overflow-visible">
           <img
             src={heroIllustration}
