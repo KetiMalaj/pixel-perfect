@@ -5,41 +5,41 @@ const Footer = () => {
   return (
     <footer>
       {/* Decorative lime bar - faded edges */}
-      <div className="flex h-3 justify-center">
-        <div className="bg-lime opacity-10" style={{ width: 142 }} />
-        <div className="bg-lime opacity-25" style={{ width: 142 }} />
-        <div className="bg-lime opacity-40" style={{ width: 142 }} />
-        <div className="bg-lime opacity-60" style={{ width: 142 }} />
-        <div className="bg-lime opacity-80" style={{ width: 142 }} />
+      <div className="flex h-3 justify-center overflow-hidden">
+        <div className="hidden md:block bg-lime opacity-10 flex-shrink-0" style={{ width: 142 }} />
+        <div className="hidden md:block bg-lime opacity-25 flex-shrink-0" style={{ width: 142 }} />
+        <div className="bg-lime opacity-40 flex-shrink-0 w-16 md:w-[142px]" />
+        <div className="bg-lime opacity-60 flex-shrink-0 w-16 md:w-[142px]" />
+        <div className="bg-lime opacity-80 flex-shrink-0 w-16 md:w-[142px]" />
         <div className="flex-1 bg-lime" />
-        <div className="bg-lime opacity-80" style={{ width: 142 }} />
-        <div className="bg-lime opacity-60" style={{ width: 142 }} />
-        <div className="bg-lime opacity-40" style={{ width: 142 }} />
-        <div className="bg-lime opacity-25" style={{ width: 142 }} />
-        <div className="bg-lime opacity-10" style={{ width: 142 }} />
+        <div className="bg-lime opacity-80 flex-shrink-0 w-16 md:w-[142px]" />
+        <div className="bg-lime opacity-60 flex-shrink-0 w-16 md:w-[142px]" />
+        <div className="bg-lime opacity-40 flex-shrink-0 w-16 md:w-[142px]" />
+        <div className="hidden md:block bg-lime opacity-25 flex-shrink-0" style={{ width: 142 }} />
+        <div className="hidden md:block bg-lime opacity-10 flex-shrink-0" style={{ width: 142 }} />
       </div>
 
       <div className="bg-primary text-lime">
-        <div className="max-w-6xl mx-auto px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-6 md:py-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative">
           {/* Dotted vertical divider between col 1 and col 2 */}
           <div className="hidden md:block absolute top-10 bottom-10 left-[30%] border-l border-dotted border-white/30" />
 
           {/* Office Location */}
           <div>
-            <h4 className="font-handwritten text-lime text-2xl font-bold mb-1">Office Location:</h4>
+            <h4 className="font-handwritten text-lime text-xl md:text-2xl font-bold mb-1">Office Location:</h4>
             <p className="text-xs font-light text-lime/70">Rr. "Themistokli Gërmenji",</p>
             <p className="text-xs font-light text-lime/70">Nr. 1, Unit 9, Tirana, 1010</p>
             <p className="mt-4 flex items-center gap-2">
-              <span className="font-handwritten text-lime text-2xl font-bold">Call:</span>
+              <span className="font-handwritten text-lime text-xl md:text-2xl font-bold">Call:</span>
               <span className="text-xs font-light text-lime/70">+355 69 800 2500</span>
             </p>
           </div>
 
           {/* Email & Socials */}
           <div>
-            <h4 className="font-handwritten text-lime text-2xl font-bold mb-1">e-mail:</h4>
+            <h4 className="font-handwritten text-lime text-xl md:text-2xl font-bold mb-1">e-mail:</h4>
             <p className="text-xs font-light text-lime/70">marketing@digitalbee.al</p>
-            <h4 className="font-handwritten text-lime text-2xl font-bold mt-4 mb-2">Socials:</h4>
+            <h4 className="font-handwritten text-lime text-xl md:text-2xl font-bold mt-4 mb-2">Socials:</h4>
             <div className="flex items-center gap-6 text-lime">
               <a href="#" className="hover:opacity-80 transition"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
               <a href="#" className="hover:opacity-80 transition"><svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="flex items-center justify-end gap-4 relative">
+          <div className="flex items-center justify-center md:justify-end gap-4 relative">
             <div className="hidden md:block h-10 w-px bg-white/40" />
             <a
               href="#"

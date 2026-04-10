@@ -36,13 +36,13 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[500px] flex items-center overflow-hidden">
-      <div className="max-w-6xl mx-auto w-full px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <section className="relative min-h-[350px] md:min-h-[500px] flex items-center overflow-hidden">
+      <div className="max-w-6xl mx-auto w-full px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
         {/* Left content */}
         <div className="relative">
           {/* Dot navigation — scrollable */}
           <div
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-8 flex flex-col gap-2 items-center cursor-grab active:cursor-grabbing select-none"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-8 flex flex-col gap-2 items-center cursor-grab active:cursor-grabbing select-none"
             onWheel={(e) => {
               e.preventDefault();
               if (e.deltaY > 0) {
@@ -96,15 +96,15 @@ const HeroSlider = () => {
               {/* Lime vertical line + title */}
               <div className="flex items-stretch gap-4">
                 <div className="w-0.5 bg-lime flex-shrink-0" />
-                <h1 className="text-5xl md:text-6xl font-black text-primary leading-tight whitespace-pre-line">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-primary leading-tight whitespace-pre-line">
                   {slides[current].title}
                 </h1>
               </div>
 
               {/* Dotted vertical line + description */}
-              <div className="flex items-stretch gap-4 mt-10">
+              <div className="flex items-stretch gap-4 mt-6 md:mt-10">
                 <div className="flex-shrink-0 w-1 hero-dot-line" />
-                <p className="text-primary/70 text-base max-w-md leading-relaxed">
+                <p className="text-primary/70 text-sm md:text-base max-w-md leading-relaxed">
                   {slides[current].description}
                 </p>
               </div>

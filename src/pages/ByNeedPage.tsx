@@ -243,9 +243,9 @@ const ByNeedPage = () => {
       <Navbar />
       <main className="flex-1">
         {/* Hero */}
-        <section className="max-w-6xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <section className="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
-            <h1 className="text-4xl md:text-5xl font-black text-primary leading-[1.1]">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary leading-[1.1]">
               {renderTitle()}
             </h1>
             <p className="mt-6 text-muted-foreground text-sm max-w-md leading-relaxed">
@@ -259,15 +259,15 @@ const ByNeedPage = () => {
             <img src={linePng} alt="" className="mt-6 h-[6px] w-24 object-cover" />
           </div>
           <div className="flex justify-center md:justify-end">
-            <img src={data.illustration} alt="" className="w-full max-w-sm object-contain" />
+            <img src={data.illustration} alt="" className="w-full max-w-xs md:max-w-sm object-contain" />
           </div>
         </section>
 
         {/* Features Grid */}
-        <section className="max-w-6xl mx-auto px-8 pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5px_1fr_1.5px_1fr] py-10 overflow-visible relative">
+        <section className="max-w-6xl mx-auto px-4 md:px-8 pb-8 md:pb-16">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5px_1fr_1.5px_1fr] py-6 md:py-10 overflow-visible relative">
             {/* Column 1 */}
-            <div className="flex flex-col pr-10">
+            <div className="flex flex-col pr-0 md:pr-10">
               {data.features.filter((_, i) => i % 3 === 0).map((f, i, arr) => (
                 <div key={i}>
                   <p className="text-sm text-foreground py-8" dangerouslySetInnerHTML={{ __html: f }} />
@@ -278,7 +278,7 @@ const ByNeedPage = () => {
             {/* Divider */}
             <div className="hidden md:block features-divider self-center" style={{ height: '150%' }} />
             {/* Column 2 */}
-            <div className="flex flex-col px-10">
+            <div className="flex flex-col px-0 md:px-10">
               {data.features.filter((_, i) => i % 3 === 1).map((f, i, arr) => (
                 <div key={i}>
                   <p className="text-sm text-foreground py-8" dangerouslySetInnerHTML={{ __html: f }} />
@@ -289,7 +289,7 @@ const ByNeedPage = () => {
             {/* Divider */}
             <div className="hidden md:block features-divider self-center" style={{ height: '150%' }} />
             {/* Column 3 */}
-            <div className="flex flex-col pl-10">
+            <div className="flex flex-col pl-0 md:pl-10">
               {data.features.filter((_, i) => i % 3 === 2).map((f, i, arr) => (
                 <div key={i}>
                   <p className="text-sm text-foreground py-8" dangerouslySetInnerHTML={{ __html: f }} />
