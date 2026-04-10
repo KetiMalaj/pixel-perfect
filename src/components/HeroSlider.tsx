@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import heroIllustration from "@/assets/hero-illustration.png";
+import heroIllustration from "@/assets/hero-illustration.svg";
 
 const slides = [
   {
@@ -27,6 +27,8 @@ const slides = [
 
 const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+  const dotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -35,32 +37,34 @@ const HeroSlider = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const handleWheel = useCallback((e: WheelEvent) => {
+    if (!isHovering) return;
+    e.preventDefault();
+    if (e.deltaY > 0) {
+      setCurrent((prev) => Math.min(prev + 1, slides.length - 1));
+    } else {
+      setCurrent((prev) => Math.max(prev - 1, 0));
+    }
+  }, [isHovering]);
+
+  useEffect(() => {
+    const el = dotRef.current;
+    if (!el) return;
+    el.addEventListener('wheel', handleWheel, { passive: false });
+    return () => el.removeEventListener('wheel', handleWheel);
+  }, [handleWheel]);
+
   return (
-    <section className="relative min-h-[350px] md:min-h-[500px] flex items-center overflow-hidden">
-      <div className="max-w-6xl mx-auto w-full px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
+    <section className="relative min-h-[450px] md:min-h-[600px] lg:min-h-[700px] flex items-center overflow-x-clip">
+      <div className="max-w-[1440px] mx-auto w-full px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
         {/* Left content */}
         <div className="relative">
           {/* Dot navigation — scrollable */}
           <div
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-8 flex flex-col gap-2 items-center cursor-grab active:cursor-grabbing select-none"
-            onWheel={(e) => {
-              e.preventDefault();
-              if (e.deltaY > 0) {
-                setCurrent((prev) => Math.min(prev + 1, slides.length - 1));
-              } else {
-                setCurrent((prev) => Math.max(prev - 1, 0));
-              }
-            }}
-            onTouchStart={(e) => {
-              const startY = e.touches[0].clientY;
-              const handleTouchEnd = (ev: TouchEvent) => {
-                const diff = startY - ev.changedTouches[0].clientY;
-                if (diff > 20) setCurrent((prev) => Math.min(prev + 1, slides.length - 1));
-                else if (diff < -20) setCurrent((prev) => Math.max(prev - 1, 0));
-                document.removeEventListener('touchend', handleTouchEnd);
-              };
-              document.addEventListener('touchend', handleTouchEnd);
-            }}
+            ref={dotRef}
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-8 flex flex-col gap-2 items-center cursor-grab active:cursor-grabbing select-none px-2 py-3"
           >
             {slides.map((_, i) => {
               const distance = Math.abs(i - current);
@@ -117,11 +121,11 @@ const HeroSlider = () => {
         </div>
 
         {/* Right illustration */}
-        <div className="hidden md:flex justify-end">
+        <div className="hidden md:flex justify-end overflow-visible">
           <img
             src={heroIllustration}
             alt="Marketing blueprint illustration"
-            className="w-full max-w-lg object-contain"
+            className="w-[130%] max-w-none object-contain"
           />
         </div>
       </div>

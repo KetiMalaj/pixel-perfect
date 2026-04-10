@@ -3,12 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import growthIllust from "@/assets/byneed-growth-illust.png";
-import audienceIllust from "@/assets/byneed-audience-illust.png";
-import brandIllust from "@/assets/byneed-brand-illust.png";
-import campaignsIllust from "@/assets/byneed-campaigns-illust.png";
-import politicalIllust from "@/assets/byneed-political-illust.png";
-import personalIllust from "@/assets/byneed-personal-illust.png";
-import digitalIllust from "@/assets/byneed-digital-illust.png";
+import audienceIllust from "@/assets/byneed-audience-illust.svg";
+import brandIllust from "@/assets/byneed-brand-illust.svg";
+import campaignsIllust from "@/assets/byneed-campaigns-illust.svg";
+import politicalIllust from "@/assets/byneed-political-illust.svg";
+import personalIllust from "@/assets/byneed-personal-illust.svg";
+import digitalIllust from "@/assets/byneed-digital-illust.svg";
 import linePng from "@/assets/line.png";
 
 import brushResults from "@/assets/brush-results.png";
@@ -108,10 +108,10 @@ const byNeedData: Record<string, ByNeedData> = {
     ],
   },
   campaigns: {
-    title: ["Plan, ", "execute,", "\nand optimize campaigns that deliver ", "impact"],
+    title: ["Plan, ", "execute,", "\nand optimize", "\n\ncampaigns that", "\ndeliver ", "impact"],
     brushWords: ["execute,"],
     ovalWords: ["impact"],
-    lightWords: ["and optimize campaigns that deliver"],
+    lightWords: ["and optimize"],
     description: "We design and manage integrated campaigns that combine strategy, creativity, and data to reach and influence your audience effectively.",
     illustration: campaignsIllust,
     features: [
@@ -124,7 +124,7 @@ const byNeedData: Record<string, ByNeedData> = {
     ],
   },
   political: {
-    title: ["Data-driven ", "strategy", " for campaigns, institutions, and public ", "engagement"],
+    title: ["Data-driven ", "strategy", "\nfor campaigns,", "\n\ninstitutions, and", "\npublic ", "engagement"],
     brushWords: ["strategy"],
     ovalWords: ["engagement"],
     description: "We support political actors, institutions, and organizations with strategic communication grounded in real-time data and public opinion insights.",
@@ -140,7 +140,7 @@ const byNeedData: Record<string, ByNeedData> = {
     bottomNote: "We turn data into <strong>actionable insights</strong> — helping you communicate with clarity, precision, and impact.",
   },
   "personal-branding": {
-    title: ["Build ", "Visibility,", " credibility, and ", "influence"],
+    title: ["Build ", "Visibility,", "\n\ncredibility,", "\nand ", "influence"],
     brushWords: ["Visibility,"],
     ovalWords: ["influence"],
     description: "We help individuals, professionals, and public figures develop a strong personal brand and manage their public presence.",
@@ -189,19 +189,24 @@ const ByNeedPage = () => {
 
   const renderTitle = () => {
     return data.title.map((part, i) => {
-      const hasBreak = part.startsWith("\n");
-      const display = hasBreak ? part.slice(1) : part;
+      const hasDoubleBreak = part.startsWith("\n\n");
+      const hasBreak = !hasDoubleBreak && part.startsWith("\n");
+      const display = hasDoubleBreak ? part.slice(2) : hasBreak ? part.slice(1) : part;
       const trimmed = display.trim();
-      const br = hasBreak ? <br key={`br-${i}`} /> : null;
+      const br = hasDoubleBreak
+        ? <span key={`br-${i}`} className="block mt-1" />
+        : hasBreak ? <br key={`br-${i}`} /> : null;
 
       if (data.brushWords.includes(trimmed)) {
         const brushImg = brushImages[trimmed];
         if (brushImg) {
+          const brushHeight = (trimmed === "Visibility," || trimmed === "execute,") ? "h-[1.25em]" : "h-[1em]";
           return (
             <span key={i}>{br}<img
               src={brushImg}
               alt={trimmed}
-              className="inline-block h-[1.1em] align-baseline relative -top-[0.05em]"
+              className={`inline-block ${brushHeight} relative -z-10`}
+              style={{ verticalAlign: '-0.15em' }}
             /></span>
           );
         }
@@ -214,15 +219,13 @@ const ByNeedPage = () => {
       if (data.ovalWords.includes(trimmed)) {
         const ovalImg = ovalImages[trimmed];
         if (ovalImg) {
-          const topOffset = (trimmed === "strategy" || trimmed === "impact") ? "top-[0.3em]" : "top-[0.3em]";
           return (
-            <img
-              key={i}
+            <span key={i}>{br}<img
               src={ovalImg}
               alt={trimmed}
-              className={`inline h-[1.1em] relative ${topOffset}`}
-              style={{ display: 'inline', verticalAlign: 'baseline' }}
-            />
+              className="inline-block h-[1.1em] relative -z-10"
+              style={{ verticalAlign: '-0.2em' }}
+            /></span>
           );
         }
         return (
@@ -243,9 +246,9 @@ const ByNeedPage = () => {
       <Navbar />
       <main className="flex-1">
         {/* Hero */}
-        <section className="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-8 md:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-4 md:gap-0 items-center">
           <div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary leading-[1.1]">
+            <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-[3.2rem] xl:text-[3.6rem] font-black text-primary ${slug === "political" ? "leading-[2.1]" : "leading-[1.55]"}`}>
               {renderTitle()}
             </h1>
             <p className="mt-6 text-muted-foreground text-sm max-w-md leading-relaxed">
@@ -258,13 +261,13 @@ const ByNeedPage = () => {
             )}
             <img src={linePng} alt="" className="mt-6 h-[6px] w-24 object-cover" />
           </div>
-          <div className="flex justify-center md:justify-end">
-            <img src={data.illustration} alt="" className="w-full max-w-xs md:max-w-sm object-contain" />
+          <div className={`flex justify-center md:justify-end ${slug === "campaigns" ? "md:-ml-48" : "md:-ml-32"}`}>
+            <img src={data.illustration} alt="" className="w-full max-w-[280px] md:max-w-[400px] lg:max-w-[480px] object-contain" />
           </div>
         </section>
 
         {/* Features Grid */}
-        <section className="max-w-6xl mx-auto px-4 md:px-8 pb-8 md:pb-16">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pb-8 md:pb-16">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5px_1fr_1.5px_1fr] py-6 md:py-10 overflow-visible relative">
             {/* Column 1 */}
             <div className="flex flex-col pr-0 md:pr-10">
