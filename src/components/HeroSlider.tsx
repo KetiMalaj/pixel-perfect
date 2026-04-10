@@ -36,13 +36,13 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[350px] md:min-h-[500px] flex items-center overflow-hidden">
+    <section className="relative min-h-[350px] md:min-h-[500px] flex items-center overflow-visible">
       <div className="max-w-6xl mx-auto w-full px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
         {/* Left content */}
-        <div className="relative">
+        <div className="relative pl-8 md:pl-0">
           {/* Dot navigation — scrollable */}
           <div
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-8 flex flex-col gap-2 items-center cursor-grab active:cursor-grabbing select-none"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 md:-ml-8 flex flex-col gap-2 items-center cursor-grab active:cursor-grabbing select-none"
             onWheel={(e) => {
               e.preventDefault();
               if (e.deltaY > 0) {
@@ -69,16 +69,16 @@ const HeroSlider = () => {
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className="relative flex items-center justify-center w-5 h-5 transition-all"
+                  className="relative flex items-center justify-center w-6 h-6 md:w-5 md:h-5 transition-all"
                   style={{ opacity }}
                 >
                   {i === current ? (
                     <>
-                      <span className="absolute w-5 h-5 rounded-full border border-primary" style={{ borderWidth: '1px' }} />
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      <span className="absolute w-6 h-6 md:w-5 md:h-5 rounded-full border border-primary" style={{ borderWidth: '1.5px' }} />
+                      <span className="w-2 h-2 md:w-1.5 md:h-1.5 rounded-full bg-primary" />
                     </>
                   ) : (
-                    <span className="w-1 h-1 rounded-full bg-primary" />
+                    <span className="w-1.5 h-1.5 md:w-1 md:h-1 rounded-full bg-primary" />
                   )}
                 </button>
               );
