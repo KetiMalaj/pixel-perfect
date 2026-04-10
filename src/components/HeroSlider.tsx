@@ -40,8 +40,28 @@ const HeroSlider = () => {
       <div className="max-w-6xl mx-auto w-full px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left content */}
         <div className="relative">
-          {/* Dot navigation */}
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -ml-8 flex flex-col gap-2 items-center">
+          {/* Dot navigation — scrollable */}
+          <div
+            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-8 flex flex-col gap-2 items-center cursor-grab active:cursor-grabbing select-none"
+            onWheel={(e) => {
+              e.preventDefault();
+              if (e.deltaY > 0) {
+                setCurrent((prev) => Math.min(prev + 1, slides.length - 1));
+              } else {
+                setCurrent((prev) => Math.max(prev - 1, 0));
+              }
+            }}
+            onTouchStart={(e) => {
+              const startY = e.touches[0].clientY;
+              const handleTouchEnd = (ev: TouchEvent) => {
+                const diff = startY - ev.changedTouches[0].clientY;
+                if (diff > 20) setCurrent((prev) => Math.min(prev + 1, slides.length - 1));
+                else if (diff < -20) setCurrent((prev) => Math.max(prev - 1, 0));
+                document.removeEventListener('touchend', handleTouchEnd);
+              };
+              document.addEventListener('touchend', handleTouchEnd);
+            }}
+          >
             {slides.map((_, i) => {
               const distance = Math.abs(i - current);
               const opacity = distance === 0 ? 1 : distance === 1 ? 0.5 : distance === 2 ? 0.25 : 0.1;
