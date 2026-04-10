@@ -185,13 +185,23 @@
     animation: scroll-logos 64s linear infinite;
   }
 
-  @media (min-width: 768px) {
-    .animate-scroll-logos {
-      animation: scroll-logos 96s linear infinite;
-    }
-  }
-
   .animate-scroll-logos:hover {
     animation-play-state: paused;
+  }
+
+  /* Mobile: 3 logos visible, 12 logos * 2 = 24 items */
+  .logo-track {
+    width: calc(24 * (100% / 3));
+  }
+
+  .logo-item {
+    width: calc(100% / 24);
+  }
+
+  /* Desktop: 6 logos visible */
+  @media (min-width: 768px) {
+    .logo-track {
+      width: calc(24 * (100% / 6));
+    }
   }
 }
