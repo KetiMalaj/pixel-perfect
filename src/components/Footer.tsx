@@ -27,18 +27,18 @@ const Footer = () => {
           {/* Office Location */}
           <div>
             <h4 className="font-handwritten text-lime text-xl md:text-2xl font-bold mb-1">Office Location:</h4>
-            <p className="text-xs font-light text-lime/70">Rr. "Themistokli Gërmenji",</p>
-            <p className="text-xs font-light text-lime/70">Nr. 1, Unit 9, Tirana, 1010</p>
+            <p className="text-sm font-light text-white md:text-lime/70 md:text-xs">Rr. "Themistokli Gërmenji",</p>
+            <p className="text-sm font-light text-white md:text-lime/70 md:text-xs">Nr. 1, Unit 9, Tirana, 1010</p>
             <p className="mt-4 flex items-center gap-2">
               <span className="font-handwritten text-lime text-xl md:text-2xl font-bold">Call:</span>
-              <span className="text-xs font-light text-lime/70">+355 69 800 2500</span>
+              <span className="text-sm font-light text-white md:text-lime/70 md:text-xs">+355 69 800 2500</span>
             </p>
           </div>
 
           {/* Email & Socials */}
           <div>
             <h4 className="font-handwritten text-lime text-xl md:text-2xl font-bold mb-1">e-mail:</h4>
-            <p className="text-xs font-light text-lime/70">marketing@digitalbee.al</p>
+            <p className="text-sm font-light text-white md:text-lime/70 md:text-xs">marketing@digitalbee.al</p>
             <h4 className="font-handwritten text-lime text-xl md:text-2xl font-bold mt-4 mb-2">Socials:</h4>
             <div className="flex items-center gap-6 text-lime">
               <a href="#" className="hover:opacity-80 transition"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
