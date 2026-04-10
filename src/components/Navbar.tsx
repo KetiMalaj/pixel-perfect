@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const byNeedItems = [
@@ -16,6 +16,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [byNeedOpen, setByNeedOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const navRef = useRef<HTMLElement>(null);
   const megaMenuRef = useRef<HTMLDivElement>(null);
   const byNeedBtnRef = useRef<HTMLButtonElement>(null);
@@ -41,6 +42,12 @@ const Navbar = () => {
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, [byNeedOpen]);
+
+  // Close all menus on route change
+  useEffect(() => {
+    setMenuOpen(false);
+    setByNeedOpen(false);
+  }, [location.pathname]);
 
   const isByNeedActive = location.pathname.startsWith("/by-need");
   const isHomeActive = location.pathname === "/" && !isByNeedActive && !byNeedOpen;
@@ -135,30 +142,53 @@ const Navbar = () => {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="fixed inset-0 top-[60px] bg-white z-40 flex flex-col items-center pt-8 gap-4 text-lg font-medium md:hidden overflow-y-auto">
-          <Link to="/" onClick={() => setMenuOpen(false)} className="text-primary hover:text-primary/70 transition">Home</Link>
-          <Link to="/" onClick={() => setMenuOpen(false)} className="text-foreground hover:text-primary transition">Services</Link>
-          <button
-            onClick={() => setByNeedOpen(!byNeedOpen)}
-            className="text-foreground hover:text-primary transition"
-          >
-            By Need
-          </button>
+          {!byNeedOpen && (
+            <>
+              <Link to="/" onClick={() => setMenuOpen(false)} className="text-primary hover:text-primary/70 transition">Home</Link>
+              <Link to="/" onClick={() => setMenuOpen(false)} className="text-foreground hover:text-primary transition">Services</Link>
+            </>
+          )}
           {byNeedOpen && (
-            <div className="flex flex-col items-center gap-2 py-2">
+            <button
+              onClick={() => setByNeedOpen(false)}
+              className="self-start ml-6 flex items-center gap-2 text-sm text-primary/60 hover:text-primary transition"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+              Back
+            </button>
+          )}
+          {!byNeedOpen && (
+            <button
+              onClick={() => setByNeedOpen(true)}
+              className="text-foreground hover:text-primary transition"
+            >
+              By Need
+            </button>
+          )}
+          {byNeedOpen && (
+            <div className="flex flex-col items-center gap-3 py-2 text-center">
               {byNeedItems.map((item) => (
-                <Link
+                <button
                   key={item.path}
-                  to={item.path}
-                  onClick={() => { setByNeedOpen(false); setMenuOpen(false); }}
-                  className="text-sm text-primary hover:font-bold transition"
+                  onClick={() => {
+                    navigate(item.path);
+                    window.scrollTo(0, 0);
+                  }}
+                  className="text-sm text-primary hover:font-bold transition text-center"
                 >
                   {item.label}
-                </Link>
+                </button>
               ))}
             </div>
           )}
-          <Link to="/" onClick={() => setMenuOpen(false)} className="text-foreground hover:text-primary transition">About</Link>
-          <Link to="/" onClick={() => setMenuOpen(false)} className="text-foreground hover:text-primary transition">Contact</Link>
+          {!byNeedOpen && (
+            <>
+              <Link to="/" onClick={() => setMenuOpen(false)} className="text-foreground hover:text-primary transition">About</Link>
+              <Link to="/" onClick={() => setMenuOpen(false)} className="text-foreground hover:text-primary transition">Contact</Link>
+            </>
+          )}
           <div className="flex items-center gap-6 text-primary mt-4">
             <a href="#" className="hover:opacity-70"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
             <a href="#" className="hover:opacity-70"><svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a>
@@ -169,10 +199,10 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Full-width mega-menu panel */}
+      {/* Full-width mega-menu panel (desktop only) */}
       <div
         ref={megaMenuRef}
-        className={`fixed left-0 w-screen bg-white/90 z-40 overflow-hidden transition-opacity duration-300 ease-in-out ${
+        className={`hidden md:block fixed left-0 w-screen bg-white/90 z-40 overflow-hidden transition-opacity duration-300 ease-in-out ${
           byNeedOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         style={{ top: navHeight, height: `calc(100vh - ${navHeight}px)` }}
