@@ -31,8 +31,10 @@ const Navbar = () => {
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const target = e.target as Node;
+      // Only close on outside click for desktop, not when mobile menu is open
       if (
         byNeedOpen &&
+        !menuOpen &&
         megaMenuRef.current && !megaMenuRef.current.contains(target) &&
         byNeedBtnRef.current && !byNeedBtnRef.current.contains(target)
       ) {
@@ -41,7 +43,7 @@ const Navbar = () => {
     };
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
-  }, [byNeedOpen]);
+  }, [byNeedOpen, menuOpen]);
 
   // Close all menus on route change
   useEffect(() => {
@@ -170,16 +172,18 @@ const Navbar = () => {
           {byNeedOpen && (
             <div className="flex flex-col items-center gap-3 py-2 text-center">
               {byNeedItems.map((item) => (
-                <button
+                <Link
                   key={item.path}
+                  to={item.path}
                   onClick={() => {
-                    navigate(item.path);
+                    setMenuOpen(false);
+                    setByNeedOpen(false);
                     window.scrollTo(0, 0);
                   }}
                   className="text-sm text-primary hover:font-bold transition text-center"
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
           )}
