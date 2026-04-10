@@ -30,7 +30,7 @@ const ClientLogos = () => {
               <img
                 src={src}
                 alt=""
-                className="max-h-[50px] md:max-h-[70px] max-w-[100px] md:max-w-[140px] object-contain opacity-80"
+                className="max-h-[58px] md:max-h-[70px] max-w-[115px] md:max-w-[140px] object-contain opacity-100 md:opacity-80"
               />
             </div>
           ))}
