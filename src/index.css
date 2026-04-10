@@ -171,4 +171,21 @@
       10% 100%, 4% 96%, 0% 88%, 1% 72%, 0% 58%, 2% 42%, 0% 30%
     );
   }
+
+  @keyframes scroll-logos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+
+  .animate-scroll-logos {
+    animation: scroll-logos 30s linear infinite;
+  }
+
+  .animate-scroll-logos:hover {
+    animation-play-state: paused;
+  }
 }

@@ -15,6 +15,7 @@ const byNeedItems = [
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [byNeedOpen, setByNeedOpen] = useState(false);
+  const [desktopCompact, setDesktopCompact] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const navRef = useRef<HTMLElement>(null);
@@ -77,21 +78,21 @@ const Navbar = () => {
             <span className={`w-7 h-0.5 bg-primary transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
           </button>
 
-          <div className="hidden md:flex items-center gap-10 text-sm font-light tracking-wide">
+          <div className={`hidden md:flex items-center gap-10 text-sm font-light tracking-wide transition-all duration-300 ${desktopCompact ? "opacity-0 max-w-0 overflow-hidden" : "opacity-100 max-w-[800px]"}`}>
             <Link
               to="/"
-              className={`hover:text-primary transition relative pb-1 ${isHomeActive ? "text-primary font-semibold" : "text-foreground"}`}
+              className={`hover:text-primary transition relative pb-1 whitespace-nowrap ${isHomeActive ? "text-primary font-semibold" : "text-foreground"}`}
             >
               Home
               {isHomeActive && <span className="absolute bottom-0 left-0 w-full h-[1px] bg-lime" />}
             </Link>
-            <Link to="/" className="text-foreground hover:text-primary transition pb-1">Services</Link>
+            <Link to="/" className="text-foreground hover:text-primary transition pb-1 whitespace-nowrap">Services</Link>
 
             <div className="relative">
               <button
                 ref={byNeedBtnRef}
                 onClick={() => setByNeedOpen(!byNeedOpen)}
-                className={`hover:text-primary transition relative pb-1 ${isByNeedActive || byNeedOpen ? "text-primary font-semibold" : "text-foreground"}`}
+                className={`hover:text-primary transition relative pb-1 whitespace-nowrap ${isByNeedActive || byNeedOpen ? "text-primary font-semibold" : "text-foreground"}`}
               >
                 By Need
                 {(isByNeedActive || byNeedOpen) && <span className="absolute bottom-0 left-0 w-full h-[1px] bg-lime" />}
@@ -109,29 +110,39 @@ const Navbar = () => {
               </div>
             </div>
 
-            <Link to="/" className="text-foreground hover:text-primary transition pb-1">About</Link>
-            <Link to="/" className="text-foreground hover:text-primary transition pb-1">Contact</Link>
+            <Link to="/" className="text-foreground hover:text-primary transition pb-1 whitespace-nowrap">About</Link>
+            <Link to="/" className="text-foreground hover:text-primary transition pb-1 whitespace-nowrap">Contact</Link>
           </div>
 
           <div className="hidden md:flex items-center gap-5">
-            <div className="w-px h-6 bg-lime" />
-            <div className="flex items-center gap-6 text-primary">
-              {/* Instagram */}
-              <a href="#" className="hover:opacity-70"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
-              {/* Facebook */}
-              <a href="#" className="hover:opacity-70"><svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a>
-              {/* X (Twitter) */}
-              <a href="#" className="hover:opacity-70"><svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-              {/* LinkedIn */}
-              <a href="#" className="hover:opacity-70"><svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"/></svg></a>
-              {/* YouTube */}
-              <a href="#" className="hover:opacity-70"><svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <div className={`flex items-center gap-5 transition-all duration-300 ${desktopCompact ? "opacity-0 max-w-0 overflow-hidden" : "opacity-100 max-w-[400px]"}`}>
+              <div className="w-px h-6 bg-lime" />
+              <div className="flex items-center gap-6 text-primary">
+                {/* Instagram */}
+                <a href="#" className="hover:opacity-70"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+                {/* Facebook */}
+                <a href="#" className="hover:opacity-70"><svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a>
+                {/* X (Twitter) */}
+                <a href="#" className="hover:opacity-70"><svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                {/* LinkedIn */}
+                <a href="#" className="hover:opacity-70"><svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"/></svg></a>
+                {/* YouTube */}
+                <a href="#" className="hover:opacity-70"><svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              </div>
+              <div className="w-px h-6 bg-lime" />
             </div>
-            <div className="w-px h-6 bg-lime" />
-            <button className="flex flex-col gap-1.5" onClick={() => setMenuOpen(!menuOpen)}>
-              <span className="w-7 h-0.5 bg-primary" />
-              <span className="w-5 h-0.5 bg-primary ml-auto" />
-              <span className="w-7 h-0.5 bg-primary" />
+            <button className="flex flex-col items-center justify-center w-7 h-7" onClick={() => { setDesktopCompact(!desktopCompact); if (!desktopCompact) setByNeedOpen(false); }}>
+              {desktopCompact ? (
+                <svg className="w-5 h-5 text-primary transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              ) : (
+                <div className="flex flex-col gap-1.5">
+                  <span className="w-7 h-0.5 bg-primary" />
+                  <span className="w-5 h-0.5 bg-primary ml-auto" />
+                  <span className="w-7 h-0.5 bg-primary" />
+                </div>
+              )}
             </button>
           </div>
         </div>
