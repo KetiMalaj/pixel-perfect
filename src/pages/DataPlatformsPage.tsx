@@ -14,14 +14,14 @@ const DataPlatformsPage = () => {
       <Navbar />
       <main className="flex-1">
         {/* Hero — left block (title+description) and right block (ghost+illustration) sit at opposite ends */}
-        <section className="max-w-[1440px] mx-auto px-6 md:px-[170px] pt-8 md:pt-10 pb-6 md:pb-8">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-10 pb-6 md:pb-8">
           {/* Ghost text — top right, own row (single line) */}
           <div className="flex justify-end">
             <span
               aria-hidden="true"
-              className="pointer-events-none font-black leading-[1] text-right tracking-[0.02em] text-[24px] md:text-[34px] lg:text-[44px]"
+              className="pointer-events-none font-black leading-[1] text-right tracking-[0.02em] text-[16px] sm:text-[20px] md:text-[34px] lg:text-[44px]"
               style={{
-                WebkitTextStroke: "1.2px hsl(var(--primary) / 0.3)",
+                WebkitTextStroke: "1.5px hsl(var(--primary) / 0.5)",
                 color: "transparent",
               }}
             >
@@ -37,7 +37,7 @@ const DataPlatformsPage = () => {
                 alt="Intelligence that Powers Better Decisions"
                 className="w-full max-w-[440px] md:max-w-[480px] lg:max-w-[520px] object-contain"
               />
-              <p className="mt-4 text-primary text-[15px] leading-[1.45] max-w-[640px]">
+              <p className="desktop-breaks mt-4 text-primary text-[15px] leading-[1.45] max-w-[640px]">
                 We provide comprehensive research services designed to give you a clear,<br />
                 actionable understanding of your market, your audience, and your performance.<br />
                 From large-scale surveys to in-depth qualitative insights, our approach combines<br />
@@ -46,21 +46,21 @@ const DataPlatformsPage = () => {
               <img src={belowText} alt="" className="mt-2 h-auto w-[100px] object-contain" />
             </div>
 
-            <div className="flex flex-col items-end flex-shrink-0 md:-mr-8 lg:-mr-16">
+            <div className="flex flex-col items-center md:items-end w-full md:w-auto md:flex-shrink-0 md:-mr-8 lg:-mr-16">
               <img
                 src={heroIllust}
                 alt=""
-                className="max-w-[320px] md:max-w-[380px] lg:max-w-[440px] object-contain"
+                className="w-full max-w-[320px] md:max-w-[380px] lg:max-w-[440px] object-contain"
               />
             </div>
           </div>
         </section>
 
         {/* Feature Block 1 — PulsON (full-width row) */}
-        <section className="max-w-[1440px] mx-auto px-6 md:px-[170px] pt-8 md:pt-12 pb-4 md:pb-8">
-          <div className="flex items-end justify-between gap-6 mb-4">
-            <img src={pulsOnHeading} alt="PulsOn" className="h-auto max-w-[170px] object-contain" />
-            <h4 className="text-[18px] font-medium text-primary leading-[1.2] text-right mt-4 relative inline-block">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-12 pb-4 md:pb-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-6 mb-4">
+            <img src={pulsOnHeading} alt="PulsOn" className="h-auto w-full max-w-[170px] object-contain" />
+            <h4 className="text-[18px] font-medium text-primary leading-[1.2] text-left md:text-right mt-0 md:mt-4 relative inline-block">
               Advanced Social Listening &amp;{" "}
               <span className="relative inline-block">
                 <img
@@ -75,7 +75,7 @@ const DataPlatformsPage = () => {
           </div>
           <div className="features-divider-h w-full mb-6" />
           <div className="text-[15px] text-foreground leading-[1.25]">
-            <p className="mb-5">
+            <p className="desktop-breaks mb-5">
               PulsON is our social listening platform designed to analyze large-scale digital conversations across social media and online channels.<br />
               PulsON goes further by enabling deeper data extraction, broader coverage, and more flexible analysis tailored to specific markets and use cases.<br />
               With PulsON, you can:
@@ -93,10 +93,10 @@ const DataPlatformsPage = () => {
         </section>
 
         {/* Feature Block 2 — PollON (full-width row) */}
-        <section className="max-w-[1440px] mx-auto px-6 md:px-[170px] pt-4 md:pt-8 pb-8 md:pb-16">
-          <div className="flex items-end justify-between gap-6 mb-4">
-            <img src={pollOnHeading} alt="PollON" className="h-auto max-w-[170px] object-contain" />
-            <h4 className="text-[18px] font-medium text-primary leading-[1.2] text-right mt-4 relative inline-block">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-4 md:pt-8 pb-8 md:pb-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-6 mb-4">
+            <img src={pollOnHeading} alt="PollON" className="h-auto w-full max-w-[170px] object-contain" />
+            <h4 className="text-[18px] font-medium text-primary leading-[1.2] text-left md:text-right mt-0 md:mt-4 relative inline-block">
               Smart Survey &amp;{" "}
               <span className="relative inline-block">
                 <img
@@ -111,7 +111,7 @@ const DataPlatformsPage = () => {
           </div>
           <div className="features-divider-h w-full mb-6" />
           <div className="text-[15px] text-foreground leading-[1.25]">
-            <p className="mb-5">
+            <p className="desktop-breaks mb-5">
               PollON is our online survey and polling platform, designed for fast and scalable CAWI research.<br />
               PollON is specifically built for the Albanian-speaking market, combining technology with access to a structured and segmented user database.<br />
               With PollON, you can:
@@ -129,9 +129,9 @@ const DataPlatformsPage = () => {
         </section>
 
         {/* Bottom CTA */}
-        <section className="max-w-[1440px] mx-auto px-6 md:px-[170px] pb-16 md:pb-24">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-16 pb-16 md:pb-24">
           <h2
-            className="font-black leading-[1.05] text-[36px] md:text-[56px] lg:text-[76px] text-left whitespace-nowrap"
+            className="font-black leading-[1.05] text-[22px] sm:text-[32px] md:text-[56px] lg:text-[76px] text-left"
             style={{
               WebkitTextStroke: "2px hsl(var(--primary) / 0.5)",
               color: "transparent",
@@ -140,7 +140,7 @@ const DataPlatformsPage = () => {
           >
             Data-Driven by Design
           </h2>
-          <p className="mt-6 text-[16px] text-primary leading-[1.5] text-left">
+          <p className="desktop-breaks mt-6 text-[16px] text-primary leading-[1.5] text-left max-w-full">
             Our platforms are fully integrated into our services, creating a unified ecosystem<br />
             where research, analytics, and strategy work together seamlessly.
           </p>

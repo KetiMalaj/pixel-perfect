@@ -224,4 +224,14 @@
       width: calc(24 * (100% / 6));
     }
   }
+
+  /* Hide hardcoded <br /> tags inside paragraphs on mobile — they're desktop-column-width line breaks */
+  .desktop-breaks br {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .desktop-breaks br {
+      display: inline;
+    }
+  }
 }

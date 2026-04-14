@@ -121,7 +121,7 @@ const Navbar = () => {
           <div className="flex-1 bg-primary opacity-30" />
           <div className="flex-1 bg-primary opacity-15" />
         </div>
-        <div className="flex items-center justify-between px-4 md:px-8 py-4 max-w-[1440px] mx-auto w-full">
+        <div className="flex items-center justify-between px-6 md:px-16 py-4 max-w-[1440px] mx-auto w-full">
           <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Digital Bee" className="h-10 md:h-14" />
           </Link>
