@@ -74,6 +74,24 @@
     display: inline-block;
   }
 
+  .lime-underline {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+  }
+  .lime-underline::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    right: -12px;
+    bottom: 6px;
+    height: 26%;
+    background: hsl(var(--lime));
+    transform: skewX(-3deg);
+    border-radius: 1px;
+    z-index: -1;
+  }
+
   .highlight-oval {
     position: relative;
     display: inline-block;
@@ -133,22 +151,24 @@
 
   .features-divider {
     display: block;
-    background: linear-gradient(
-      to bottom,
-      hsla(254, 70%, 85%, 0) 0%,
-      hsla(254, 70%, 80%, 0.3) 16%,
-      hsl(254, 95%, 50%) 50%,
-      hsla(254, 70%, 80%, 0.3) 84%,
-      hsla(254, 70%, 85%, 0) 100%
-    );
-    -webkit-mask-image: radial-gradient(circle, black 0.5px, transparent 0.5px);
-    -webkit-mask-size: 1px 4px;
-    -webkit-mask-repeat: repeat-y;
-    -webkit-mask-position: center top;
-    mask-image: radial-gradient(circle, black 0.5px, transparent 0.5px);
-    mask-size: 1px 4px;
-    mask-repeat: repeat-y;
-    mask-position: center top;
+    width: 2px;
+    background-image: radial-gradient(circle, hsl(var(--primary) / 0.55) 0.9px, transparent 1px);
+    background-size: 2px 6px;
+    background-repeat: repeat-y;
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
+
+  .features-divider-h {
+    display: block;
+    height: 2px;
+    background-image: radial-gradient(circle, hsl(var(--primary) / 0.55) 0.9px, transparent 1px);
+    background-size: 6px 2px;
+    background-repeat: repeat-x;
+    background-position: left center;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   }
 
   .highlight-brush::before {

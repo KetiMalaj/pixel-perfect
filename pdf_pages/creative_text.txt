@@ -1,0 +1,84 @@
+[668.3,62.9,744.7,87.4] size=20.0 color=0x0 font=Scandia-Light | Home  
+[776.3,62.8,862.5,87.4] size=20.0 color=0x5113f9 font=Scandia-Medium | Services 
+[920.3,62.9,1003.4,87.4] size=20.0 color=0x0 font=Scandia-Light | By Need 
+[1064.3,62.9,1140.7,87.4] size=20.0 color=0x0 font=Scandia-Light | About   
+[1172.3,62.9,1251.7,87.4] size=20.0 color=0x0 font=Scandia-Light | Contact
+[298.4,51.3,473.8,99.9] size=34.0 color=0x5113f9 font=CenturyGothic-Bold | Digital Bee
+[229.8,746.7,1083.4,773.7] size=22.0 color=0x5113f9 font=Scandia-Regular | We create compelling brand experiences that connect with audiences, commu-
+[229.8,777.7,1088.6,804.6] size=22.0 color=0x5113f9 font=Scandia-Regular | nicate clearly, and leave a lasting impression. Our creative approach combines 
+[229.8,808.7,1071.8,835.6] size=22.0 color=0x5113f9 font=Scandia-Regular | strategy, design, and storytelling to elevate your brand across every touchpoint.
+[227.2,1085.9,560.2,1110.4] size=20.0 color=0x0 font=Scandia-Regular | We create high-impact video con-
+[227.2,1109.9,563.0,1134.4] size=20.0 color=0x0 font=Scandia-Regular | tent that tells your story and drives 
+[227.2,1133.9,358.5,1158.4] size=20.0 color=0x0 font=Scandia-Regular | engagement.
+[227.2,1157.9,568.6,1182.4] size=20.0 color=0x0 font=Scandia-Regular | From concept and scripting to ﬁlm-
+[227.2,1181.9,576.5,1206.4] size=20.0 color=0x0 font=Scandia-Regular | ing and post-production, our videos 
+[227.2,1205.9,365.8,1230.4] size=20.0 color=0x0 font=Scandia-Regular | are crafted to:
+[227.2,1229.9,400.3,1254.4] size=20.0 color=0x0 font=Scandia-Regular | Capture attention
+[227.2,1253.9,571.6,1278.4] size=20.0 color=0x0 font=Scandia-Regular | Communicate your message clearly
+[227.2,1277.9,546.0,1302.4] size=20.0 color=0x0 font=Scandia-Regular | Increase reach and engagement
+[223.7,1018.9,445.1,1061.0] size=34.2 color=0x5113f9 font=Scandia-Bold | Photography
+[770.5,1085.9,1108.1,1110.4] size=20.0 color=0x0 font=Scandia-Regular | We design visuals that are not only 
+[770.5,1109.9,1055.7,1134.4] size=20.0 color=0x0 font=Scandia-Regular | eye-catching, but purposeful.
+[770.5,1133.9,1106.9,1158.4] size=20.0 color=0x0 font=Scandia-Regular | From logos to full marketing collat-
+[770.5,1157.9,1094.1,1182.4] size=20.0 color=0x0 font=Scandia-Regular | eral and digital assets, we ensure 
+[770.5,1181.9,1099.8,1206.4] size=20.0 color=0x0 font=Scandia-Regular | your brand communicates consis-
+[770.5,1205.9,1072.1,1230.4] size=20.0 color=0x0 font=Scandia-Regular | tently and effectively across all 
+[770.5,1229.9,868.7,1254.4] size=20.0 color=0x0 font=Scandia-Regular | platforms.
+[767.0,1018.9,1029.7,1061.0] size=34.2 color=0x5113f9 font=Scandia-Bold | Graphic Design
+[225.3,2381.4,1084.2,2408.4] size=22.0 color=0x5113f9 font=Scandia-Regular | Our research doesn’t stop at data collection — we translate insights into clear, 
+[225.3,2412.4,889.1,2439.4] size=22.0 color=0x5113f9 font=Scandia-Regular | strategic recommendations that help you act with conﬁdence.
+[220.4,270.3,481.2,480.3] size=107.1 color=0xc9da2d font=Hand-Of-Sean | Ideas
+[212.7,405.6,645.2,540.9] size=110.4 color=0x5113f9 font=Scandia-Regular | Capture
+[642.4,405.0,1188.1,540.9] size=110.4 color=0x5113f9 font=Scandia-Bold |  Attention.
+[505.7,320.0,744.7,455.3] size=110.4 color=0x5113f9 font=Scandia-Regular | that 
+[758.4,498.2,997.4,633.4] size=110.4 color=0x5113f9 font=Scandia-Regular | that 
+[222.1,607.7,964.5,743.7] size=110.4 color=0x5113f9 font=Scandia-Bold | Builds Brands
+[213.3,497.5,737.8,633.4] size=110.4 color=0x5113f9 font=Scandia-Bold | Creativity
+[1314.7,1085.9,1663.5,1110.4] size=20.0 color=0x0 font=Scandia-Regular | We build and reﬁne brand identities 
+[1314.7,1109.9,1606.8,1134.4] size=20.0 color=0x0 font=Scandia-Regular | that are clear, distinctive, and 
+[1314.7,1133.9,1524.6,1158.4] size=19.2 color=0x0 font=Scandia-Regular | aligned with your vision.
+[1314.7,1157.9,1589.6,1182.4] size=19.2 color=0x0 font=Scandia-Regular | Our branding process includes:
+[1314.7,1181.9,1587.9,1206.4] size=19.2 color=0x0 font=Scandia-Regular | Brand strategy and positioning
+[1314.7,1205.9,1560.5,1230.4] size=19.2 color=0x0 font=Scandia-Regular | Visual identity development
+[1314.7,1229.9,1567.8,1254.4] size=19.2 color=0x0 font=Scandia-Regular | Messaging and tone of voice
+[1314.7,1253.9,1635.6,1278.4] size=19.2 color=0x0 font=Scandia-Regular | The result is a brand that stands out 
+[1314.7,1277.9,1654.7,1302.4] size=19.2 color=0x0 font=Scandia-Regular | and resonates with the right audience.
+[1311.2,1018.9,1467.7,1061.0] size=34.2 color=0x5113f9 font=Scandia-Bold | Branding
+[514.3,1692.2,834.7,1716.7] size=19.1 color=0x0 font=Scandia-Regular | We produce high-quality, professional 
+[514.3,1716.2,849.5,1740.7] size=19.1 color=0x0 font=Scandia-Regular | photography that captures the essence 
+[514.3,1740.2,810.3,1764.7] size=19.1 color=0x0 font=Scandia-Regular | of your brand — from products and 
+[514.3,1764.2,858.6,1788.7] size=19.1 color=0x0 font=Scandia-Regular | people to environments and experiences.
+[514.3,1788.2,831.3,1812.7] size=19.1 color=0x0 font=Scandia-Regular | Our services also include event pho-
+[514.3,1812.2,838.9,1836.7] size=19.1 color=0x0 font=Scandia-Regular | tography, covering conferences, cor-
+[514.3,1836.2,852.3,1860.7] size=19.1 color=0x0 font=Scandia-Regular | porate events, gatherings, and live ac-
+[514.3,1860.2,838.4,1884.7] size=19.1 color=0x0 font=Scandia-Regular | tivations with a team of experienced 
+[514.3,1884.2,761.4,1908.7] size=19.1 color=0x0 font=Scandia-Regular | professional photographers.
+[514.3,1932.2,756.2,1956.7] size=19.1 color=0x0 font=Scandia-Regular | Our visuals are designed to:
+[514.3,1956.2,771.4,1980.7] size=19.1 color=0x0 font=Scandia-Regular | Strengthen brand perception
+[514.3,1980.2,842.0,2004.7] size=19.1 color=0x0 font=Scandia-Regular | Capture key moments and narratives
+[514.3,2004.2,774.5,2028.7] size=19.1 color=0x0 font=Scandia-Regular | Create emotional connection
+[514.3,2028.2,846.8,2052.7] size=19.1 color=0x0 font=Scandia-Regular | Enhance your presence across digital 
+[514.3,2052.2,594.8,2076.7] size=19.1 color=0x0 font=Scandia-Regular | and print
+[510.8,1625.2,805.9,1667.3] size=34.2 color=0x5113f9 font=Scandia-Bold | Video Production
+[1118.6,1692.2,1459.6,1716.7] size=20.0 color=0x0 font=Scandia-Regular | We develop content that fuels your 
+[1118.6,1716.2,1459.0,1740.7] size=20.0 color=0x0 font=Scandia-Regular | marketing strategy and keeps your 
+[1118.6,1740.2,1308.4,1764.7] size=20.0 color=0x0 font=Scandia-Regular | audience engaged.
+[1118.6,1788.2,1246.9,1812.7] size=20.0 color=0x0 font=Scandia-Regular | This includes:
+[1118.6,1812.2,1325.2,1836.7] size=20.0 color=0x0 font=Scandia-Regular | Social media content
+[1118.6,1836.2,1370.5,1860.7] size=20.0 color=0x0 font=Scandia-Regular | Blog and editorial content
+[1118.6,1860.2,1460.0,1884.7] size=19.1 color=0x0 font=Scandia-Regular | Campaign assets and digital materials
+[1118.6,1884.2,1417.1,1908.7] size=20.0 color=0x0 font=Scandia-Regular | All content is aligned with your 
+[1118.6,1908.2,1445.9,1932.7] size=20.0 color=0x0 font=Scandia-Regular | brand voice and designed to con-
+[1118.6,1932.2,1460.7,1956.7] size=20.0 color=0x0 font=Scandia-Regular | nect with your audience in a mean-
+[1118.6,1956.2,1220.4,1980.7] size=20.0 color=0x0 font=Scandia-Regular | ingful way.
+[1115.1,1625.2,1411.8,1667.3] size=34.2 color=0x5113f9 font=Scandia-Bold | Content Creation
+[849.0,2811.1,1070.5,2829.4] size=15.0 color=0xc9da2d font=Scandia-Light | © DigitalBee. All rights reserved.
+[1364.1,2667.8,1562.4,2703.5] size=29.0 color=0xc9da2d font=Scandia-Bold | NEWSLETTER
+[238.2,2654.0,487.3,2678.4] size=20.0 color=0xc9da2d font=Scandia-Light | Rr. “Themistokli Gërmenji”, 
+[238.2,2678.0,454.3,2702.4] size=20.0 color=0xc9da2d font=Scandia-Light | Nr. 1, Unit 9, Tirana, 1010
+[798.9,2654.0,1032.1,2678.4] size=20.0 color=0xc9da2d font=Scandia-Light | marketing@digitalbee.al
+[238.5,2622.0,375.7,2657.8] size=20.0 color=0xc9da2d font=Hand-Of-Sean | Office Location:
+[238.5,2713.2,277.9,2749.1] size=20.0 color=0xc9da2d font=Hand-Of-Sean | Call:
+[800.7,2622.7,856.6,2658.5] size=20.0 color=0xc9da2d font=Hand-Of-Sean | e-mail:
+[800.7,2684.8,866.9,2720.6] size=20.0 color=0xc9da2d font=Hand-Of-Sean | Socials:
+[288.6,2719.7,452.4,2744.2] size=20.0 color=0xc9da2d font=Scandia-Light | +355 69 800 2500

@@ -1,0 +1,72 @@
+[668.3,62.9,744.7,87.4] size=20.0 color=0x0 font=Scandia-Light | Home  
+[776.3,62.8,862.5,87.4] size=20.0 color=0x5113f9 font=Scandia-Medium | Services 
+[920.3,62.9,1003.4,87.4] size=20.0 color=0x0 font=Scandia-Light | By Need 
+[1064.3,62.9,1140.7,87.4] size=20.0 color=0x0 font=Scandia-Light | About   
+[1172.3,62.9,1251.7,87.4] size=20.0 color=0x0 font=Scandia-Light | Contact
+[298.4,51.3,473.8,99.9] size=34.0 color=0x5113f9 font=CenturyGothic-Bold | Digital Bee
+[229.8,620.9,1068.9,647.8] size=22.0 color=0x5113f9 font=Scandia-Regular | We deliver integrated digital solutions designed to increase visibility, attract the 
+[229.8,651.9,1068.7,678.8] size=21.6 color=0x5113f9 font=Scandia-Regular | right audience, and drive measurable results. Combining strategy, technology, and 
+[229.8,682.9,1033.2,709.8] size=21.6 color=0x5113f9 font=Scandia-Regular | data, we help your brand grow and perform in a competitive digital landscape.
+[533.5,1085.9,859.3,1110.4] size=20.0 color=0x0 font=Scandia-Regular | We create and manage targeted 
+[533.5,1109.9,821.6,1134.4] size=20.0 color=0x0 font=Scandia-Regular | social media campaigns that 
+[533.5,1133.9,875.5,1158.4] size=20.0 color=0x0 font=Scandia-Regular | engage users and grow your brand 
+[533.5,1157.9,628.1,1182.4] size=20.0 color=0x0 font=Scandia-Regular | presence.
+[533.5,1181.9,878.7,1206.4] size=20.0 color=0x0 font=Scandia-Regular | Across platforms like Facebook, Ins-
+[533.5,1205.9,762.9,1230.4] size=20.0 color=0x0 font=Scandia-Regular | tagram, and TikTok, we:
+[533.5,1229.9,824.0,1254.4] size=20.0 color=0x0 font=Scandia-Regular | Develop tailored ad strategies
+[533.5,1253.9,812.5,1278.4] size=20.0 color=0x0 font=Scandia-Regular | Optimize audience targeting
+[533.5,1277.9,872.5,1302.4] size=20.0 color=0x0 font=Scandia-Regular | Continuously monitor and improve 
+[533.5,1301.9,660.8,1326.4] size=20.0 color=0x0 font=Scandia-Regular | performance
+[533.5,1325.9,851.9,1350.4] size=20.0 color=0x0 font=Scandia-Regular | Maximize reach and return on in-
+[533.5,1349.9,677.6,1374.4] size=20.0 color=0x0 font=Scandia-Regular | vestment (ROI)
+[530.0,988.7,750.8,1030.7] size=34.2 color=0x5113f9 font=Scandia-Bold | Social Media
+[530.0,1020.0,724.2,1062.1] size=34.2 color=0x5113f9 font=Scandia-Bold | Advertising
+[1076.7,1085.9,1404.3,1110.4] size=20.0 color=0x0 font=Scandia-Regular | We run data-driven pay-per-click 
+[1076.7,1109.9,1412.3,1134.4] size=20.0 color=0x0 font=Scandia-Regular | campaigns that generate immedi-
+[1076.7,1133.9,1366.9,1158.4] size=20.0 color=0x0 font=Scandia-Regular | ate trafﬁc and qualiﬁed leads.
+[1076.7,1157.9,1405.2,1182.4] size=20.0 color=0x0 font=Scandia-Regular | Our Google Ads strategies ensure:
+[1076.7,1181.9,1408.1,1206.4] size=20.0 color=0x0 font=Scandia-Regular | High visibility for relevant searches
+[1076.7,1205.9,1333.0,1230.4] size=20.0 color=0x0 font=Scandia-Regular | Efﬁcient budget allocation
+[1076.7,1229.9,1417.2,1254.4] size=20.0 color=0x0 font=Scandia-Regular | Continuous optimization for perfor-
+[1076.7,1253.9,1145.2,1278.4] size=20.0 color=0x0 font=Scandia-Regular | mance
+[1076.7,1277.9,1419.5,1302.4] size=20.0 color=0x0 font=Scandia-Regular | Measurable results and conversions
+[1073.2,989.1,1205.1,1031.2] size=34.2 color=0x5113f9 font=Scandia-Bold | Google 
+[1073.2,1020.5,1246.9,1062.6] size=34.2 color=0x5113f9 font=Scandia-Bold | Ads (PPC)
+[225.3,2381.4,1084.1,2408.4] size=22.0 color=0x5113f9 font=Scandia-Regular | We don’t just run campaigns — we build digital systems that perform, helping you 
+[225.3,2412.4,902.0,2439.4] size=22.0 color=0x5113f9 font=Scandia-Regular | reach the right people, at the right time, with the right message.
+[1118.6,1696.2,1449.3,1720.7] size=20.0 color=0x0 font=Scandia-Regular | We design and build user-friendly, 
+[1118.6,1720.2,1465.8,1744.7] size=20.0 color=0x0 font=Scandia-Regular | responsive websites tailored to your 
+[1118.6,1744.2,1369.6,1768.7] size=20.0 color=0x0 font=Scandia-Regular | brand and business goals.
+[1118.6,1768.2,1357.6,1792.7] size=20.0 color=0x0 font=Scandia-Regular | Our websites are built to:
+[1118.6,1792.2,1453.6,1816.7] size=20.0 color=0x0 font=Scandia-Regular | Deliver a seamless user experience
+[1118.6,1816.2,1374.9,1840.7] size=20.0 color=0x0 font=Scandia-Regular | Reﬂect your brand identity
+[1118.6,1840.2,1369.2,1864.7] size=20.0 color=0x0 font=Scandia-Regular | Perform across all devices
+[1118.6,1864.2,1414.1,1888.7] size=20.0 color=0x0 font=Scandia-Regular | Convert visitors into customers
+[1115.1,1598.2,1192.3,1640.2] size=34.2 color=0x5113f9 font=Scandia-Bold | Web
+[1115.1,1629.5,1340.9,1671.6] size=34.2 color=0x5113f9 font=Scandia-Bold | Development
+[220.9,342.0,1083.3,447.0] size=85.3 color=0x5113f9 font=Scandia-Bold | Performance-Driven
+[581.4,446.8,895.2,551.8] size=85.3 color=0x5113f9 font=Scandia-Bold | Growth
+[217.0,405.7,533.4,613.8] size=103.6 color=0xc9da2d font=Hand-Of-Sean | Digital
+[1317.0,691.3,1458.4,741.9] size=28.3 color=0x5113f9 font=Hand-Of-Sean | Digital Bee
+[523.7,1689.7,855.2,1714.2] size=20.0 color=0x0 font=Scandia-Regular | We optimize your digital presence 
+[523.7,1713.7,811.2,1738.2] size=20.0 color=0x0 font=Scandia-Regular | to ensure your brand is visible 
+[523.7,1737.7,861.4,1762.2] size=20.0 color=0x0 font=Scandia-Regular | where it matters most — on search 
+[523.7,1761.7,604.1,1786.2] size=20.0 color=0x0 font=Scandia-Regular | engines.
+[523.7,1785.7,855.2,1810.2] size=20.0 color=0x0 font=Scandia-Regular | Our approach combines on-page 
+[523.7,1809.7,782.2,1834.2] size=20.0 color=0x0 font=Scandia-Regular | and off-page strategies to:
+[523.7,1833.7,760.7,1858.2] size=20.0 color=0x0 font=Scandia-Regular | Improve search rankings
+[523.7,1857.7,740.2,1882.2] size=19.6 color=0x0 font=Scandia-Regular | Increase organic trafﬁc
+[523.7,1881.7,792.7,1906.2] size=19.6 color=0x0 font=Scandia-Regular | Target high-intent audiences
+[523.7,1905.7,861.9,1930.2] size=19.6 color=0x0 font=Scandia-Regular | Strengthen long-term online visibility
+[522.5,1614.5,600.0,1656.6] size=34.2 color=0x5113f9 font=Scandia-Bold | SEO 
+[522.5,1647.4,814.3,1672.0] size=20.0 color=0x5113f9 font=Scandia-Bold | (Search Engine Optimization)
+[849.0,2811.1,1070.5,2829.4] size=15.0 color=0xc9da2d font=Scandia-Light | © DigitalBee. All rights reserved.
+[1364.1,2667.8,1562.4,2703.5] size=29.0 color=0xc9da2d font=Scandia-Bold | NEWSLETTER
+[238.2,2654.0,487.3,2678.4] size=20.0 color=0xc9da2d font=Scandia-Light | Rr. “Themistokli Gërmenji”, 
+[238.2,2678.0,454.3,2702.4] size=20.0 color=0xc9da2d font=Scandia-Light | Nr. 1, Unit 9, Tirana, 1010
+[798.9,2654.0,1032.1,2678.4] size=20.0 color=0xc9da2d font=Scandia-Light | marketing@digitalbee.al
+[238.5,2622.0,375.7,2657.8] size=20.0 color=0xc9da2d font=Hand-Of-Sean | Office Location:
+[238.5,2713.2,277.9,2749.1] size=20.0 color=0xc9da2d font=Hand-Of-Sean | Call:
+[800.7,2622.7,856.6,2658.5] size=20.0 color=0xc9da2d font=Hand-Of-Sean | e-mail:
+[800.7,2684.8,866.9,2720.6] size=20.0 color=0xc9da2d font=Hand-Of-Sean | Socials:
+[288.6,2719.7,452.4,2744.2] size=20.0 color=0xc9da2d font=Scandia-Light | +355 69 800 2500

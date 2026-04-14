@@ -12,26 +12,49 @@ const byNeedItems = [
   { label: "Build Your Digital Presence", path: "/by-need/digital-presence" },
 ];
 
+const servicesItems = [
+  { label: "Research Components", path: "/services/marketing-research" },
+  { label: "Creative Marketing", path: "/services/creative-marketing" },
+  { label: "Digital Marketing", path: "/services/digital-marketing" },
+  { label: "Software @ Data Platforms", path: "/services/data-platforms" },
+];
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [byNeedOpen, setByNeedOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [activeNav, setActiveNav] = useState<string | null>(null);
   const [desktopCompact, setDesktopCompact] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const navRef = useRef<HTMLElement>(null);
   const megaMenuRef = useRef<HTMLDivElement>(null);
+  const servicesMenuRef = useRef<HTMLDivElement>(null);
   const byNeedBtnRef = useRef<HTMLButtonElement>(null);
+  const servicesBtnRef = useRef<HTMLButtonElement>(null);
   const [navHeight, setNavHeight] = useState(0);
+  const [servicesBtnX, setServicesBtnX] = useState(0);
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const servicesCloseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseEnter = () => {
     if (closeTimeout.current) clearTimeout(closeTimeout.current);
     setByNeedOpen(true);
+    setServicesOpen(false);
   };
 
   const handleMouseLeave = () => {
     closeTimeout.current = setTimeout(() => setByNeedOpen(false), 200);
+  };
+
+  const handleServicesMouseEnter = () => {
+    if (servicesCloseTimeout.current) clearTimeout(servicesCloseTimeout.current);
+    setServicesOpen(true);
+    setByNeedOpen(false);
+  };
+
+  const handleServicesMouseLeave = () => {
+    servicesCloseTimeout.current = setTimeout(() => setServicesOpen(false), 200);
   };
 
   useEffect(() => {
@@ -41,9 +64,20 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
+    const measure = () => {
+      if (servicesBtnRef.current) {
+        const r = servicesBtnRef.current.getBoundingClientRect();
+        setServicesBtnX(r.left + r.width / 2);
+      }
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [servicesOpen, desktopCompact]);
+
+  useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const target = e.target as Node;
-      // Only close on outside click for desktop, not when mobile menu is open
       if (
         byNeedOpen &&
         !menuOpen &&
@@ -52,19 +86,28 @@ const Navbar = () => {
       ) {
         setByNeedOpen(false);
       }
+      if (
+        servicesOpen &&
+        !menuOpen &&
+        servicesMenuRef.current && !servicesMenuRef.current.contains(target) &&
+        servicesBtnRef.current && !servicesBtnRef.current.contains(target)
+      ) {
+        setServicesOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
-  }, [byNeedOpen, menuOpen]);
+  }, [byNeedOpen, servicesOpen, menuOpen]);
 
-  // Close all menus on route change
   useEffect(() => {
     setMenuOpen(false);
     setByNeedOpen(false);
+    setServicesOpen(false);
     if (location.pathname.startsWith("/by-need")) setActiveNav(null);
   }, [location.pathname]);
 
   const isByNeedActive = location.pathname.startsWith("/by-need");
+  const isServicesActive = location.pathname.startsWith("/services");
 
 
   return (
@@ -99,7 +142,26 @@ const Navbar = () => {
               Home
               <span className={`absolute bottom-0 left-0 w-full h-[1px] bg-lime transition ${activeNav === "home" ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`} />
             </Link>
-            <Link to="/" className="group relative text-foreground hover:text-primary hover:font-semibold transition pb-1 whitespace-nowrap">Services<span className="absolute bottom-0 left-0 w-full h-[1px] bg-lime opacity-0 group-hover:opacity-100 transition" /></Link>
+            <div className="relative" onMouseEnter={handleServicesMouseEnter} onMouseLeave={handleServicesMouseLeave}>
+              <button
+                ref={servicesBtnRef}
+                onClick={() => { setServicesOpen(!servicesOpen); setByNeedOpen(false); }}
+                className={`hover:text-primary transition relative pb-1 whitespace-nowrap ${isServicesActive || servicesOpen ? "text-primary font-semibold" : "text-foreground"}`}
+              >
+                Services
+                {(isServicesActive || servicesOpen) && <span className="absolute bottom-0 left-0 w-full h-[1px] bg-lime" />}
+              </button>
+
+              <div
+                className={`absolute top-full left-1/2 -translate-x-1/2 mt-[5px] z-[60] transition-opacity duration-300 ease-in-out ${
+                  servicesOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+                }`}
+              >
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <polygon points="7,12 0,0 14,0" fill="hsl(var(--primary))" />
+                </svg>
+              </div>
+            </div>
 
             <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               <button
@@ -117,8 +179,8 @@ const Navbar = () => {
                   byNeedOpen ? "opacity-100" : "opacity-0 pointer-events-none"
                 }`}
               >
-                <svg width="14" height="8" viewBox="0 0 14 8">
-                  <polygon points="7,8 0,0 14,0" fill="blue" />
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <polygon points="7,12 0,0 14,0" fill="hsl(var(--primary))" />
                 </svg>
               </div>
             </div>
@@ -168,15 +230,12 @@ const Navbar = () => {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="fixed inset-0 top-[60px] bg-white z-40 flex flex-col items-center pt-8 gap-4 text-lg font-medium md:hidden overflow-y-auto">
-          {!byNeedOpen && (
-            <>
-              <Link to="/" onClick={() => setMenuOpen(false)} className="text-primary hover:text-primary/70 transition">Home</Link>
-              <Link to="/" onClick={() => setMenuOpen(false)} className="text-foreground hover:text-primary transition">Services</Link>
-            </>
+          {!byNeedOpen && !servicesOpen && (
+            <Link to="/" onClick={() => setMenuOpen(false)} className="text-primary hover:text-primary/70 transition">Home</Link>
           )}
-          {byNeedOpen && (
+          {(byNeedOpen || servicesOpen) && (
             <button
-              onClick={() => setByNeedOpen(false)}
+              onClick={() => { setByNeedOpen(false); setServicesOpen(false); }}
               className="self-start ml-6 flex items-center gap-2 text-sm text-primary/60 hover:text-primary transition"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -185,9 +244,35 @@ const Navbar = () => {
               Back
             </button>
           )}
-          {!byNeedOpen && (
+          {!byNeedOpen && !servicesOpen && (
             <button
-              onClick={() => setByNeedOpen(true)}
+              onClick={() => { setServicesOpen(true); setByNeedOpen(false); }}
+              className="text-foreground hover:text-primary transition"
+            >
+              Services
+            </button>
+          )}
+          {servicesOpen && (
+            <div className="flex flex-col items-center gap-3 py-2 text-center">
+              {servicesItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setServicesOpen(false);
+                    window.scrollTo(0, 0);
+                  }}
+                  className="text-sm text-primary hover:font-bold transition text-center"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          )}
+          {!byNeedOpen && !servicesOpen && (
+            <button
+              onClick={() => { setByNeedOpen(true); setServicesOpen(false); }}
               className="text-foreground hover:text-primary transition"
             >
               By Need
@@ -211,7 +296,7 @@ const Navbar = () => {
               ))}
             </div>
           )}
-          {!byNeedOpen && (
+          {!byNeedOpen && !servicesOpen && (
             <>
               <Link to="/" onClick={() => setMenuOpen(false)} className="text-foreground hover:text-primary transition">About</Link>
               <Link to="/" onClick={() => setMenuOpen(false)} className="text-foreground hover:text-primary transition">Contact</Link>
@@ -246,9 +331,67 @@ const Navbar = () => {
                 onClick={() => setByNeedOpen(false)}
                 className="group flex items-center justify-center gap-1.5 py-2.5 text-base text-primary hover:font-bold transition"
               >
-                <span className="text-lime text-xs leading-none opacity-0 group-hover:opacity-100 transition" style={{ WebkitTextStroke: '0.5px hsl(var(--primary))' }}>▶</span>
+                <svg
+                className="opacity-0 group-hover:opacity-100 transition"
+                width="12"
+                height="14"
+                viewBox="0 0 12 14"
+                aria-hidden="true"
+              >
+                <polygon
+                  points="1,1 1,13 12,7"
+                  fill="hsl(var(--lime))"
+                  stroke="hsl(var(--primary))"
+                  strokeWidth="0.8"
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
+                />
+              </svg>
                 {item.label}
               </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Services mega-menu panel (desktop only) */}
+      <div
+        ref={servicesMenuRef}
+        onMouseEnter={handleServicesMouseEnter}
+        onMouseLeave={handleServicesMouseLeave}
+        className={`hidden md:block fixed left-0 w-screen bg-white/90 z-40 overflow-hidden transition-opacity duration-300 ease-in-out ${
+          servicesOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        style={{ top: navHeight, height: `calc(100vh - ${navHeight}px)` }}
+      >
+        <div
+          className="absolute top-0 pt-4 flex flex-col items-center gap-1"
+          style={{ left: servicesBtnX, transform: "translateX(-50%)" }}
+        >
+          {servicesItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={() => setServicesOpen(false)}
+              className="group flex items-center gap-1.5 py-2.5 text-base text-primary hover:font-bold transition whitespace-nowrap"
+            >
+              <svg
+                className="opacity-0 group-hover:opacity-100 transition"
+                width="12"
+                height="14"
+                viewBox="0 0 12 14"
+                aria-hidden="true"
+              >
+                <polygon
+                  points="1,1 1,13 12,7"
+                  fill="hsl(var(--lime))"
+                  stroke="hsl(var(--primary))"
+                  strokeWidth="0.8"
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
+                />
+              </svg>
+              {item.label}
+            </Link>
           ))}
         </div>
       </div>

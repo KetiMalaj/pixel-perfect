@@ -1,0 +1,46 @@
+[668.3,62.9,744.7,87.4] size=20.0 color=0x0 font=Scandia-Light | Home  
+[776.3,62.8,862.5,87.4] size=20.0 color=0x5113f9 font=Scandia-Medium | Services 
+[920.3,62.9,1003.4,87.4] size=20.0 color=0x0 font=Scandia-Light | By Need 
+[1064.3,62.9,1140.7,87.4] size=20.0 color=0x0 font=Scandia-Light | About   
+[1172.3,62.9,1251.7,87.4] size=20.0 color=0x0 font=Scandia-Light | Contact
+[298.4,51.3,473.8,99.9] size=34.0 color=0x5113f9 font=CenturyGothic-Bold | Digital Bee
+[226.8,689.5,1080.4,716.5] size=22.0 color=0x5113f9 font=Scandia-Regular | We provide comprehensive research services designed to give you a clear,
+[226.8,720.5,1085.7,747.5] size=22.0 color=0x5113f9 font=Scandia-Regular | actionable understanding of your market, your audience, and your performance. 
+[226.8,751.5,1085.6,778.5] size=22.0 color=0x5113f9 font=Scandia-Regular | From large-scale surveys to in-depth qualitative insights, our approach combines 
+[226.8,782.5,1054.5,809.5] size=22.0 color=0x5113f9 font=Scandia-Regular | methodology, technology, and strategic analysis to support smarter decisions.
+[226.8,1199.5,1506.8,1224.0] size=20.0 color=0x0 font=Scandia-Regular | PulsON is our social listening platform designed to analyze large-scale digital conversations across social media and online channels.
+[226.8,1224.5,1625.0,1249.0] size=20.0 color=0x0 font=Scandia-Regular | PulsON goes further by enabling deeper data extraction, broader coverage, and more ﬂexible analysis tailored to speciﬁc markets and use cases.
+[226.8,1249.5,438.8,1274.0] size=20.0 color=0x0 font=Scandia-Regular | With PulsON, you can:
+[226.8,1299.5,851.0,1324.0] size=20.0 color=0x0 font=Scandia-Regular | Monitor real-time sentiment around brands, individuals, or topics
+[226.8,1324.5,739.5,1349.0] size=20.0 color=0x0 font=Scandia-Regular | Track narratives, trends, and emerging conversations
+[226.8,1349.5,725.5,1374.0] size=20.0 color=0x0 font=Scandia-Regular | Analyze audience behavior and perception at scale
+[226.8,1374.5,750.6,1399.0] size=20.0 color=0x0 font=Scandia-Regular | Identify risks, opportunities, and shifts in public opinion
+[226.8,1399.5,1399.9,1424.0] size=20.0 color=0x0 font=Scandia-Regular | PulsON delivers high-volume, actionable insights that support communication, marketing, and strategic decision-making.
+[215.6,286.6,661.5,486.4] size=93.2 color=0xc9da2d font=Hand-Of-Sean | Intelligence
+[216.0,433.1,884.0,567.0] size=108.8 color=0x5113f9 font=Scandia-Bold | that Powers 
+[216.0,533.0,1091.6,666.9] size=108.8 color=0x5113f9 font=Scandia-Bold | Better Decisions
+[225.3,2284.3,1084.1,2311.3] size=22.0 color=0x5113f9 font=Scandia-Regular | Our platforms are fully integrated into our services, creating a uniﬁed ecosystem 
+[225.3,2315.3,920.4,2342.3] size=22.0 color=0x5113f9 font=Scandia-Regular | where research, analytics, and strategy work together seamlessly.
+[1378.9,371.4,1488.7,447.2] size=38.0 color=0xc9da2d font=Hand-Of-Sean | Data 
+[340.1,1075.2,467.6,1120.4] size=36.8 color=0x0 font=Scandia-Bold | PulsOn
+[226.8,1720.3,1136.0,1744.8] size=20.0 color=0x0 font=Scandia-Regular | PollON is our online survey and polling platform, designed for fast and scalable CAWI research.
+[226.8,1744.3,1603.4,1768.8] size=20.0 color=0x0 font=Scandia-Regular | PollON is speciﬁcally built for the Albanian-speaking market, combining technology with access to a structured and segmented user database.
+[226.8,1768.3,434.5,1792.8] size=20.0 color=0x0 font=Scandia-Regular | With PollON, you can:
+[226.8,1816.3,742.4,1840.8] size=20.0 color=0x0 font=Scandia-Regular | Reach targeted audiences across predeﬁned clusters
+[226.8,1840.3,751.6,1864.8] size=20.0 color=0x0 font=Scandia-Regular | Conduct surveys, polls, and opinion tracking efﬁciently
+[226.8,1864.3,576.3,1888.8] size=20.0 color=0x0 font=Scandia-Regular | Access real-time data and analytics
+[226.8,1888.3,913.2,1912.8] size=20.0 color=0x0 font=Scandia-Regular | Support research projects, campaigns, and decision-making processes
+[226.8,1912.3,1389.4,1936.8] size=20.0 color=0x0 font=Scandia-Regular | PollON enables precise, localized insights, making it a powerful tool for both market research and public opinion analysis.
+[338.4,1595.9,467.8,1641.2] size=36.8 color=0x0 font=Scandia-Bold | PollON
+[984.0,1084.3,1680.0,1118.1] size=27.6 color=0x5113f9 font=Scandia-Medium | Advanced Social Listening & Sentiment Intelligence
+[1101.0,1605.0,1677.6,1638.9] size=27.6 color=0x5113f9 font=Scandia-Medium | Smart Survey & Opinion Research Platform
+[849.0,2724.9,1070.5,2743.2] size=15.0 color=0xc9da2d font=Scandia-Light | © DigitalBee. All rights reserved.
+[1364.1,2581.6,1562.4,2617.3] size=29.0 color=0xc9da2d font=Scandia-Bold | NEWSLETTER
+[238.2,2567.7,487.3,2592.2] size=20.0 color=0xc9da2d font=Scandia-Light | Rr. “Themistokli Gërmenji”, 
+[238.2,2591.7,454.3,2616.2] size=20.0 color=0xc9da2d font=Scandia-Light | Nr. 1, Unit 9, Tirana, 1010
+[798.9,2567.7,1032.1,2592.2] size=20.0 color=0xc9da2d font=Scandia-Light | marketing@digitalbee.al
+[238.5,2535.8,375.7,2571.6] size=20.0 color=0xc9da2d font=Hand-Of-Sean | Office Location:
+[238.5,2627.0,277.9,2662.8] size=20.0 color=0xc9da2d font=Hand-Of-Sean | Call:
+[800.7,2536.5,856.6,2572.3] size=20.0 color=0xc9da2d font=Hand-Of-Sean | e-mail:
+[800.7,2598.6,866.9,2634.4] size=20.0 color=0xc9da2d font=Hand-Of-Sean | Socials:
+[288.6,2633.5,452.4,2657.9] size=20.0 color=0xc9da2d font=Scandia-Light | +355 69 800 2500

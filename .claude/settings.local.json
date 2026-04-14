@@ -28,7 +28,9 @@
       "Bash(cp \"c:/Users/Admin/Pictures/logo good/Screenshot 2026-04-10 161249.png\" 03_one.png)",
       "Bash(cp \"c:/Users/Admin/Pictures/logo good/Screenshot 2026-04-10 161256.png\" 04_heineken.png)",
       "Bash(cp \"c:/Users/Admin/Pictures/logo good/Screenshot 2026-04-10 161302.png\" 05_abi.png)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(pdftotext -layout \"DB web.pdf\" \"db_web.txt\")",
+      "Bash(npx tsc:*)"
     ]
   }
 }
