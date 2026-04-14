@@ -248,7 +248,7 @@ const ByNeedPage = () => {
         {/* Hero */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-8 md:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-4 md:gap-0 items-center">
           <div>
-            <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-[3.2rem] xl:text-[3.6rem] font-black text-primary ${slug === "political" ? "leading-[2.1]" : "leading-[1.55]"}`}>
+            <h1 className={`text-[2.2rem] sm:text-[2.6rem] md:text-4xl lg:text-[3.2rem] xl:text-[3.6rem] font-black text-primary ${slug === "political" ? "leading-[2.1]" : "leading-[1.55]"}`}>
               {renderTitle()}
             </h1>
             <p className="mt-6 text-muted-foreground text-sm max-w-md leading-relaxed">
