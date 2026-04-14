@@ -5,6 +5,7 @@ import heroTitle from "@/assets/data-platforms/Screenshot 2026-04-14 135836.png"
 import heroIllust from "@/assets/data-platforms/Screenshot 2026-04-14 135854.png";
 import pulsOnHeading from "@/assets/data-platforms/Screenshot 2026-04-14 135804.png";
 import pollOnHeading from "@/assets/data-platforms/Screenshot 2026-04-14 135757.png";
+import brushPollon from "@/assets/data-platforms/brush-pollon.png";
 import belowText from "@/assets/marketing-research/below-text.png";
 
 const DataPlatformsPage = () => {
@@ -24,7 +25,7 @@ const DataPlatformsPage = () => {
                 color: "transparent",
               }}
             >
-              SOFTWARE &amp; DATA PLATFORMS
+              SOFTWARE &amp;<br />DATA PLATFORMS
             </span>
           </div>
 
@@ -45,7 +46,7 @@ const DataPlatformsPage = () => {
               <img src={belowText} alt="" className="mt-2 h-auto w-[100px] object-contain" />
             </div>
 
-            <div className="flex flex-col items-end flex-shrink-0">
+            <div className="flex flex-col items-end flex-shrink-0 md:-mr-8 lg:-mr-16">
               <img
                 src={heroIllust}
                 alt=""
@@ -57,10 +58,19 @@ const DataPlatformsPage = () => {
 
         {/* Feature Block 1 — PulsON (full-width row) */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-[170px] pt-8 md:pt-12 pb-4 md:pb-8">
-          <div className="flex items-center justify-between gap-6 mb-4">
-            <img src={pulsOnHeading} alt="PulsOn" className="h-auto max-w-[220px] object-contain" />
-            <h4 className="text-[20px] md:text-[22px] font-medium text-primary leading-[1.1] text-right">
-              Advanced Social Listening &amp; <span className="lime-underline">Sentiment Intelligence</span>
+          <div className="flex items-end justify-between gap-6 mb-4">
+            <img src={pulsOnHeading} alt="PulsOn" className="h-auto max-w-[170px] object-contain" />
+            <h4 className="text-[18px] font-medium text-primary leading-[1.2] text-right mt-4 relative inline-block">
+              Advanced Social Listening &amp;{" "}
+              <span className="relative inline-block">
+                <img
+                  src={brushPollon}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-x-[-6px] top-1/2 -translate-y-1/2 w-[calc(100%+12px)] h-auto -z-10 pointer-events-none"
+                />
+                <span className="relative">Sentiment Intelligence</span>
+              </span>
             </h4>
           </div>
           <div className="features-divider-h w-full mb-6" />
@@ -84,10 +94,19 @@ const DataPlatformsPage = () => {
 
         {/* Feature Block 2 — PollON (full-width row) */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-[170px] pt-4 md:pt-8 pb-8 md:pb-16">
-          <div className="flex items-center justify-between gap-6 mb-4">
-            <img src={pollOnHeading} alt="PollON" className="h-auto max-w-[220px] object-contain" />
-            <h4 className="text-[20px] md:text-[22px] font-medium text-primary leading-[1.1] text-right">
-              Smart Survey &amp; <span className="lime-underline">Opinion Research Platform</span>
+          <div className="flex items-end justify-between gap-6 mb-4">
+            <img src={pollOnHeading} alt="PollON" className="h-auto max-w-[170px] object-contain" />
+            <h4 className="text-[18px] font-medium text-primary leading-[1.2] text-right mt-4 relative inline-block">
+              Smart Survey &amp;{" "}
+              <span className="relative inline-block">
+                <img
+                  src={brushPollon}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-x-[-6px] top-1/2 -translate-y-1/2 w-[calc(100%+12px)] h-auto -z-10 pointer-events-none"
+                />
+                <span className="relative">Opinion Research Platform</span>
+              </span>
             </h4>
           </div>
           <div className="features-divider-h w-full mb-6" />
