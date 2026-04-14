@@ -14,12 +14,12 @@ const DataPlatformsPage = () => {
       <Navbar />
       <main className="flex-1">
         {/* Hero — left block (title+description) and right block (ghost+illustration) sit at opposite ends */}
-        <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-10 pb-6 md:pb-8">
-          {/* Ghost text — top right, own row (single line) */}
-          <div className="flex justify-end">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-10 pb-6 md:pb-8 flex flex-col">
+          {/* Ghost text — top-right on desktop, below hero row on mobile */}
+          <div className="flex justify-center md:justify-end order-2 md:order-1 mt-4 md:mt-0">
             <span
               aria-hidden="true"
-              className="pointer-events-none font-black leading-[1] text-right tracking-[0.02em] text-[16px] sm:text-[20px] md:text-[34px] lg:text-[44px]"
+              className="pointer-events-none font-black leading-[1] text-center md:text-right tracking-[0.02em] text-[16px] sm:text-[20px] md:text-[34px] lg:text-[44px]"
               style={{
                 WebkitTextStroke: "1.5px hsl(var(--primary) / 0.5)",
                 color: "transparent",
@@ -30,7 +30,7 @@ const DataPlatformsPage = () => {
           </div>
 
           {/* Hero row — title (left) + chart (right) parallel & side by side */}
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-8 mt-6 md:mt-8">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-8 mt-0 md:mt-8 order-1 md:order-2">
             <div className="flex-1 min-w-0">
               <img
                 src={heroTitle}
