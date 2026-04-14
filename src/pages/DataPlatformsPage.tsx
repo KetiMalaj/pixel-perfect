@@ -14,15 +14,29 @@ const DataPlatformsPage = () => {
       <main className="flex-1">
         {/* Hero — left block (title+description) and right block (ghost+illustration) sit at opposite ends */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-[170px] pt-8 md:pt-10 pb-6 md:pb-8">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-4">
-            {/* Left block: Title + description — matches PDF: title 625px, description wraps to 4 lines */}
-            <div className="flex-shrink-0 md:max-w-[644px] w-full">
+          {/* Ghost text — top right, own row (single line) */}
+          <div className="flex justify-end">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none font-black leading-[1] text-right tracking-[0.02em] text-[24px] md:text-[34px] lg:text-[44px]"
+              style={{
+                WebkitTextStroke: "1.2px hsl(var(--primary) / 0.3)",
+                color: "transparent",
+              }}
+            >
+              SOFTWARE &amp; DATA PLATFORMS
+            </span>
+          </div>
+
+          {/* Hero row — title (left) + chart (right) parallel & side by side */}
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-8 mt-6 md:mt-8">
+            <div className="flex-1 min-w-0">
               <img
                 src={heroTitle}
                 alt="Intelligence that Powers Better Decisions"
-                className="w-full max-w-[625px] object-contain"
+                className="w-full max-w-[440px] md:max-w-[480px] lg:max-w-[520px] object-contain"
               />
-              <p className="mt-4 text-primary text-[15px] leading-[1.45]">
+              <p className="mt-4 text-primary text-[15px] leading-[1.45] max-w-[640px]">
                 We provide comprehensive research services designed to give you a clear,<br />
                 actionable understanding of your market, your audience, and your performance.<br />
                 From large-scale surveys to in-depth qualitative insights, our approach combines<br />
@@ -30,24 +44,12 @@ const DataPlatformsPage = () => {
               </p>
               <img src={belowText} alt="" className="mt-2 h-auto w-[100px] object-contain" />
             </div>
-            {/* Right block: Ghost text + illustration pushed to far right */}
-            <div className="flex flex-col items-end flex-1 ml-auto">
-              <span
-                aria-hidden="true"
-                className="pointer-events-none font-black leading-[1] text-right tracking-[0.02em] text-[32px] md:text-[44px] lg:text-[56px]"
-                style={{
-                  WebkitTextStroke: "1.2px hsl(var(--primary) / 0.3)",
-                  color: "transparent",
-                }}
-              >
-                SOFTWARE &amp;
-                <br />
-                DATA PLATFORMS
-              </span>
+
+            <div className="flex flex-col items-end flex-shrink-0">
               <img
                 src={heroIllust}
                 alt=""
-                className="mt-2 max-w-[340px] md:max-w-[400px] lg:max-w-[440px] object-contain"
+                className="max-w-[320px] md:max-w-[380px] lg:max-w-[440px] object-contain"
               />
             </div>
           </div>
