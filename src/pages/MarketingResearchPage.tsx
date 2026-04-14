@@ -19,13 +19,13 @@ const MarketingResearchPage = () => {
         {/* Hero — left block (title+description) and right block (ghost+chart) sit at opposite ends */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-10 pb-6 md:pb-8">
           <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-4">
-            <div className="flex-shrink-0 md:max-w-[644px] w-full">
+            <div className="flex-shrink-0 md:max-w-[720px] w-full md:mt-20 lg:mt-28">
               <img
                 src={heroTitle}
                 alt="Turn Data into Decisions"
-                className="w-full max-w-[625px] object-contain"
+                className="w-full max-w-[720px] object-contain"
               />
-              <p className="desktop-breaks mt-4 text-primary text-[15px] leading-[1.45]">
+              <p className="desktop-breaks mt-4 text-primary text-[14px] leading-[1.5] md:text-justify max-w-[720px]">
                 We provide comprehensive research services designed to give you a clear,<br />
                 actionable understanding of your market, your audience, and your performance.<br />
                 From large-scale surveys to in-depth qualitative insights, our approach combines<br />
@@ -36,7 +36,7 @@ const MarketingResearchPage = () => {
             <div className="flex flex-col items-center md:items-end w-full md:w-auto md:flex-shrink-0 md:ml-auto">
               <span
                 aria-hidden="true"
-                className="pointer-events-none font-black leading-[0.95] text-center md:text-right tracking-tight text-[20px] sm:text-[26px] md:text-[44px] lg:text-[56px]"
+                className="pointer-events-none font-black leading-[0.95] text-center md:text-right tracking-tight text-[20px] sm:text-[26px] md:text-[48px] lg:text-[60px]"
                 style={{
                   WebkitTextStroke: "1.5px hsl(var(--primary) / 0.5)",
                   color: "transparent",
@@ -49,7 +49,7 @@ const MarketingResearchPage = () => {
               <img
                 src={heroChart}
                 alt=""
-                className="mt-2 w-full max-w-[340px] md:max-w-[400px] lg:max-w-[440px] object-contain"
+                className="mt-2 w-full max-w-[380px] md:max-w-[460px] lg:max-w-[540px] object-contain"
               />
             </div>
           </div>
@@ -57,7 +57,7 @@ const MarketingResearchPage = () => {
 
         {/* Features Grid — 3 equal columns at PDF x=227, 770, 1313 */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-12 pb-8 md:pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2px_1fr_2px_1fr] py-4 overflow-visible relative gap-y-10 md:gap-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_3px_1fr_3px_1fr] py-4 overflow-visible relative gap-y-10 md:gap-y-0">
             {/* Column 1 */}
             <div className="flex flex-col pr-0 md:pr-10">
               <div className="flex items-start gap-3 mb-5">

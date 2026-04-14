@@ -15,32 +15,15 @@ const DigitalMarketingPage = () => {
       <Navbar />
       <main className="flex-1">
         {/* Hero — left block (title+description) and right block (ghost+illustration) sit at opposite ends */}
-        <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-10 pb-6 md:pb-8 flex flex-col">
-          {/* Ghost text — top-right on desktop, after hero row on mobile */}
-          <div className="flex justify-center md:justify-end order-2 md:order-1 mt-4 md:mt-0">
-            <span
-              aria-hidden="true"
-              className="pointer-events-none font-black leading-[1] text-center md:text-right tracking-[0.02em] text-[18px] sm:text-[24px] md:text-[44px] lg:text-[56px]"
-              style={{
-                WebkitTextStroke: "1.5px hsl(var(--primary) / 0.5)",
-                color: "transparent",
-              }}
-            >
-              DIGITAL MARKETING
-              <br />
-              &amp; DEVELOPMENT
-            </span>
-          </div>
-
-          {/* Hero row — title (left) + chart (right) parallel & side by side */}
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-8 mt-0 md:mt-8 order-1 md:order-2">
-            <div className="flex-1 min-w-0">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-10 pb-6 md:pb-8">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-8">
+            <div className="flex-1 min-w-0 md:max-w-[760px] md:mt-44 lg:mt-56">
               <img
                 src={heroTitle}
                 alt="Performance-Driven Digital Growth"
-                className="w-full max-w-[440px] md:max-w-[480px] lg:max-w-[520px] object-contain"
+                className="w-full max-w-[760px] object-contain"
               />
-              <p className="desktop-breaks mt-4 text-primary text-[15px] leading-[1.45] max-w-[640px]">
+              <p className="desktop-breaks mt-4 text-primary text-[14px] leading-[1.5] md:text-justify max-w-[760px]">
                 We deliver integrated digital solutions designed to increase visibility, attract the<br />
                 right audience, and drive measurable results. Combining strategy, technology, and<br />
                 data, we help your brand grow and perform in a competitive digital landscape.
@@ -48,11 +31,23 @@ const DigitalMarketingPage = () => {
               <img src={belowText} alt="" className="mt-2 h-auto w-[100px] object-contain" />
             </div>
 
-            <div className="flex flex-col items-center md:items-end w-full md:w-auto md:flex-shrink-0">
+            <div className="flex flex-col items-center md:items-end w-full md:w-[480px] lg:w-[560px] md:flex-shrink-0">
+              <span
+                aria-hidden="true"
+                className="pointer-events-none font-black leading-[1.05] text-center md:text-right tracking-tight text-[22px] sm:text-[28px] md:text-[36px] lg:text-[48px] whitespace-nowrap"
+                style={{
+                  WebkitTextStroke: "1.8px hsl(var(--primary) / 0.5)",
+                  color: "transparent",
+                }}
+              >
+                DIGITAL MARKETING
+                <br />
+                &amp; DEVELOPMENT
+              </span>
               <img
                 src={heroIllust}
                 alt=""
-                className="w-full max-w-[320px] md:max-w-[380px] lg:max-w-[440px] object-contain"
+                className="mt-2 w-full max-w-[360px] md:max-w-[440px] lg:max-w-[500px] object-contain"
               />
             </div>
           </div>
@@ -60,7 +55,7 @@ const DigitalMarketingPage = () => {
 
         {/* Top row: 2 columns — Social Media Advertising, Google Ads (PPC) */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-12 pb-4 md:pb-8">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2px_1fr] max-w-[820px] mx-auto py-4 overflow-visible relative gap-y-10 md:gap-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_3px_1fr] max-w-[820px] mx-auto py-4 overflow-visible relative gap-y-10 md:gap-y-0">
             {/* Column 1 — Social Media Advertising */}
             <div className="flex flex-col pr-0 md:pr-10">
               <img src={headingSocial} alt="Social Media Advertising" className="h-auto w-full max-w-[260px] object-contain mb-5" />
@@ -107,7 +102,7 @@ const DigitalMarketingPage = () => {
 
         {/* Bottom row: 2 columns — SEO, Web Development */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-4 md:pt-8 pb-8 md:pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2px_1fr] max-w-[820px] mx-auto py-4 overflow-visible relative gap-y-10 md:gap-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_3px_1fr] max-w-[820px] mx-auto py-4 overflow-visible relative gap-y-10 md:gap-y-0">
             {/* Column 1 — SEO */}
             <div className="flex flex-col pr-0 md:pr-10">
               <img src={headingSeo} alt="SEO (Search Engine Optimization)" className="h-auto w-full max-w-[300px] object-contain mb-5" />

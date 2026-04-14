@@ -18,13 +18,13 @@ const CreativeMarketingPage = () => {
         {/* Hero — left block (title+description) and right block (ghost+illustration) sit at opposite ends */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-10 pb-6 md:pb-8">
           <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-4">
-            <div className="flex-shrink-0 md:max-w-[760px] w-full md:mt-8 lg:mt-10">
+            <div className="flex-shrink-0 md:max-w-[820px] w-full md:mt-20 lg:mt-28">
               <img
                 src={heroTitle}
                 alt="Ideas that Capture Attention. Creativity that Builds Brands"
-                className="w-full max-w-[760px] object-contain"
+                className="w-full max-w-[820px] object-contain"
               />
-              <p className="desktop-breaks mt-4 text-primary text-[15px] leading-[1.45]">
+              <p className="desktop-breaks mt-4 text-primary text-[14px] leading-[1.5] md:text-justify max-w-[820px]">
                 We create compelling brand experiences that connect with audiences, commu-<br />
                 nicate clearly, and leave a lasting impression. Our creative approach combines<br />
                 strategy, design, and storytelling to elevate your brand across every touchpoint.
@@ -48,7 +48,7 @@ const CreativeMarketingPage = () => {
               <img
                 src={heroIllust}
                 alt=""
-                className="mt-2 w-full max-w-[300px] md:max-w-[340px] lg:max-w-[380px] object-contain"
+                className="mt-2 w-full max-w-[360px] md:max-w-[420px] lg:max-w-[480px] object-contain"
               />
             </div>
           </div>
@@ -56,7 +56,7 @@ const CreativeMarketingPage = () => {
 
         {/* Top row: 3 columns — Photography, Graphic Design, Branding */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-12 pb-4 md:pb-8">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2px_1fr_2px_1fr] py-4 overflow-visible relative gap-y-10 md:gap-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_3px_1fr_3px_1fr] py-4 overflow-visible relative gap-y-10 md:gap-y-0">
             {/* Column 1 — Photography */}
             <div className="flex flex-col pr-0 md:pr-10">
               <img src={headingPhotography} alt="Photography" className="h-auto w-full max-w-[240px] object-contain mb-5" />
@@ -116,7 +116,7 @@ const CreativeMarketingPage = () => {
 
         {/* Bottom row: 2 columns — Video Production, Content Creation (centered) */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-4 md:pt-8 pb-8 md:pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2px_1fr] max-w-[820px] mx-auto py-4 overflow-visible relative gap-y-10 md:gap-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_3px_1fr] max-w-[820px] mx-auto py-4 overflow-visible relative gap-y-10 md:gap-y-0">
             {/* Column — Video Production */}
             <div className="flex flex-col px-0 md:px-10">
               <img src={headingVideo} alt="Video Production" className="h-auto w-full max-w-[260px] object-contain mb-5" />

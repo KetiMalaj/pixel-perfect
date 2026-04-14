@@ -14,30 +14,15 @@ const DataPlatformsPage = () => {
       <Navbar />
       <main className="flex-1">
         {/* Hero — left block (title+description) and right block (ghost+illustration) sit at opposite ends */}
-        <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-10 pb-6 md:pb-8 flex flex-col">
-          {/* Ghost text — top-right on desktop, below hero row on mobile */}
-          <div className="flex justify-center md:justify-end order-2 md:order-1 mt-4 md:mt-0">
-            <span
-              aria-hidden="true"
-              className="pointer-events-none font-black leading-[1] text-center md:text-right tracking-[0.02em] text-[16px] sm:text-[20px] md:text-[34px] lg:text-[44px]"
-              style={{
-                WebkitTextStroke: "1.5px hsl(var(--primary) / 0.5)",
-                color: "transparent",
-              }}
-            >
-              SOFTWARE &amp;<br />DATA PLATFORMS
-            </span>
-          </div>
-
-          {/* Hero row — title (left) + chart (right) parallel & side by side */}
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-8 mt-0 md:mt-8 order-1 md:order-2">
-            <div className="flex-1 min-w-0">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-16 pt-8 md:pt-10 pb-6 md:pb-8">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-8">
+            <div className="flex-1 min-w-0 md:max-w-[600px] md:mt-20 lg:mt-24">
               <img
                 src={heroTitle}
                 alt="Intelligence that Powers Better Decisions"
-                className="w-full max-w-[440px] md:max-w-[480px] lg:max-w-[520px] object-contain"
+                className="w-full max-w-[600px] object-contain"
               />
-              <p className="desktop-breaks mt-4 text-primary text-[15px] leading-[1.45] max-w-[640px]">
+              <p className="desktop-breaks mt-4 text-primary text-[14px] leading-[1.5] md:text-justify max-w-[600px]">
                 We provide comprehensive research services designed to give you a clear,<br />
                 actionable understanding of your market, your audience, and your performance.<br />
                 From large-scale surveys to in-depth qualitative insights, our approach combines<br />
@@ -46,11 +31,21 @@ const DataPlatformsPage = () => {
               <img src={belowText} alt="" className="mt-2 h-auto w-[100px] object-contain" />
             </div>
 
-            <div className="flex flex-col items-center md:items-end w-full md:w-auto md:flex-shrink-0 md:-mr-8 lg:-mr-16">
+            <div className="flex flex-col items-center md:items-end w-full md:w-auto md:flex-shrink-0 md:mr-16 lg:mr-28">
+              <span
+                aria-hidden="true"
+                className="pointer-events-none font-black leading-[1] text-center md:text-right tracking-[0.02em] text-[16px] sm:text-[20px] md:text-[34px] lg:text-[44px]"
+                style={{
+                  WebkitTextStroke: "1.5px hsl(var(--primary) / 0.5)",
+                  color: "transparent",
+                }}
+              >
+                SOFTWARE &amp;<br />DATA PLATFORMS
+              </span>
               <img
                 src={heroIllust}
                 alt=""
-                className="w-full max-w-[320px] md:max-w-[380px] lg:max-w-[440px] object-contain"
+                className="mt-2 w-full max-w-[360px] md:max-w-[440px] lg:max-w-[520px] object-contain"
               />
             </div>
           </div>
